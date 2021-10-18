@@ -2,17 +2,22 @@
   "name": "vite-vue3-ts-template",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
+    "element-plus": "^1.1.0-beta.20",
+    "rollup-plugin-terser": "^7.0.2",
     "vue": "^3.2.16"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
     "typescript": "^4.4.3",
     "vite": "^2.6.4",
-    "vue-tsc": "^0.3.0"
+    "vue-tsc": "^0.3.0",
+    "node-sass": "^4.5.3",
+    "sass": "^1.32.8",
+    "sass-loader": "8.0.0"
   }
 }

@@ -1,6 +1,7 @@
 <template>
   <div>
     test
+    <!-- <IconFont icon='icon-news1'> -->
   </div>
 </template>
 

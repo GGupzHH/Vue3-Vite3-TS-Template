@@ -1,13 +1,10 @@
 // Vue Component Install
-import IconFont from 'comps/IconFont/index.vue'
-
-interface GlobelComponents {
-  install: Function
-}
-
-const component: GlobelComponents = {
-  install: function (app: any):void {
-    app.component(IconFont.name, IconFont)
+import IconFont from './IconFont/index.vue'
+console.log(IconFont)
+const component = {
+  install: function (app: import("vue").App<any>): void {
+    // console.log(IconFont)
+    // app.component(IconFont.name, IconFont)
   }
 }
 

@@ -3,8 +3,8 @@
     class="icon-font"
     aria-hidden="true"
     :class="getClassName"
-    @click="handleClick()"
   >
+    <!-- @click="handleClick()" -->
     <filter
       id="drop-shadow"
       xmlns="http://www.w3.org/2000/svg"
@@ -30,84 +30,145 @@
       </feMerge>
     </filter>
     <g
-      v-bind="getAttrs()"
     >
+      <!-- v-bind="getAttrs()" -->
       <use :xlink:href="'#' + icon" />
     </g>
   </svg>
 </template>
 
-<script>
 
-export default {
+<script lang='ts'>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   name: 'IconFont',
-  props: {
-    icon: {
-      type: String,
-      default: ''
-    },
-    shadow: {
-      type: Boolean,
-      default: false
-    },
-    verticalCenter: {
-      type: Boolean,
-      default: false
-    },
-    cursor: {
-      type: Boolean,
-      default: false
-    },
-    disabled: {
-      type: Boolean,
-      default: false
-    }
-  },
-  emits: ['click'],
-  computed: {
-    getClassName () {
-      const className = []
-      if (this.verticalCenter) {
-        className.push('middle')
-      }
-      if (this.cursor) {
-        className.push('cursor')
-      }
-      if (this.disabled) {
-        className.push('disabled')
-      }
-      return className
-    }
-  },
-  methods: {
-    handleClick () {
-      !this.disabled && this.$emit('click')
-    },
-    getAttrs () {
-      const attrs = {}
-      this.shadow &&
-      (attrs.filter = 'url(#drop-shadow)')
-      return attrs
-    }
-  }
-}
+  inheritAttrs: false
+})
+// <script lang='ts' setup>
+// const props = defineProps({
+//   icon: {
+//       type: String,
+//       default: ''
+//     },
+//     shadow: {
+//       type: Boolean,
+//       default: false
+//     },
+//     verticalCenter: {
+//       type: Boolean,
+//       default: false
+//     },
+//     cursor: {
+//       type: Boolean,
+//       default: false
+//     },
+//     disabled: {
+//       type: Boolean,
+//       default: false
+//     }
+// })
+
+// const emit = defineEmits(['click'])
+
+// console.log(props)
+// const getClassName = computed(() => {
+//       const className = []
+//       if (this.verticalCenter) {
+//         className.push('middle')
+//       }
+//       if (this.cursor) {
+//         className.push('cursor')
+//       }
+//       if (this.disabled) {
+//         className.push('disabled')
+//       }
+//       return className
+//     })
+
+// const handleClick = () => {
+//       !this.disabled && this.$emit('click')
+//     }
+//     const getAttrs = () => {
+//       const attrs = {}
+//       this.shadow &&
+//       (attrs.filter = 'url(#drop-shadow)')
+//       return attrs
+//     }
+//  <script>
+
+// // export default {
+// //   name: 'IconFont',
+// //   props: {
+// //     icon: {
+// //       type: String,
+// //       default: ''
+// //     },
+// //     shadow: {
+// //       type: Boolean,
+// //       default: false
+// //     },
+// //     verticalCenter: {
+// //       type: Boolean,
+// //       default: false
+// //     },
+// //     cursor: {
+// //       type: Boolean,
+// //       default: false
+// //     },
+// //     disabled: {
+// //       type: Boolean,
+// //       default: false
+// //     }
+// //   },
+// //   emits: ['click'],
+// //   computed: {
+// //     getClassName () {
+// //       const className = []
+// //       if (this.verticalCenter) {
+// //         className.push('middle')
+// //       }
+// //       if (this.cursor) {
+// //         className.push('cursor')
+// //       }
+// //       if (this.disabled) {
+// //         className.push('disabled')
+// //       }
+// //       return className
+// //     }
+// //   },
+// //   methods: {
+// //     handleClick () {
+// //       !this.disabled && this.$emit('click')
+// //     },
+// //     getAttrs () {
+// //       const attrs = {}
+// //       this.shadow &&
+// //       (attrs.filter = 'url(#drop-shadow)')
+// //       return attrs
+// //     }
+// //   }
+// // }
+// </script>
+// </script>
 </script>
 
+
 <style lang="scss" scoped>
-.icon-font {
-  width: 1em; height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
-  &.middle {
-    vertical-align: middle;
-  }
-  &.cursor {
-    cursor: pointer;
-  }
-  &.disabled {
-    color: #c0c4cc;
-    cursor: not-allowed;
-  }
-}
+// .icon-font {
+//   width: 1em; height: 1em;
+//   vertical-align: -0.15em;
+//   fill: currentColor;
+//   overflow: hidden;
+//   &.middle {
+//     vertical-align: middle;
+//   }
+//   &.cursor {
+//     cursor: pointer;
+//   }
+//   &.disabled {
+//     color: #c0c4cc;
+//     cursor: not-allowed;
+//   }
+// }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     test
-    <!-- <IconFont icon='icon-news1'> -->
+    <IconFont icon='icon-news1' @click='click'/>
   </div>
 </template>
 
@@ -21,7 +21,12 @@ export default defineComponent({
     // this
     const { ctx } = getCurrentInstance()
 
+    const click = () => {
+      console.log(123)
+    }
+
     return {
+      click
     }
   }
 })

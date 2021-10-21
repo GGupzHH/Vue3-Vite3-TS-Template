@@ -37,61 +37,77 @@
   </svg>
 </template>
 
-<script>
 
-export default {
-  name: 'IconFont',
-  props: {
-    icon: {
-      type: String,
-      default: ''
-    },
-    shadow: {
-      type: Boolean,
-      default: false
-    },
-    verticalCenter: {
-      type: Boolean,
-      default: false
-    },
-    cursor: {
-      type: Boolean,
-      default: false
-    },
-    disabled: {
-      type: Boolean,
-      default: false
-    }
-  },
-  emits: ['click'],
-  computed: {
-    getClassName () {
-      const className = []
-      if (this.verticalCenter) {
-        className.push('middle')
-      }
-      if (this.cursor) {
-        className.push('cursor')
-      }
-      if (this.disabled) {
-        className.push('disabled')
-      }
-      return className
-    }
-  },
-  methods: {
-    handleClick () {
-      !this.disabled && this.$emit('click')
-    },
-    getAttrs () {
-      const attrs = {}
-      this.shadow &&
-      (attrs.filter = 'url(#drop-shadow)')
-      return attrs
-    }
-  }
-}
+<script lang='ts'>
+import { computed, defineComponent, toRefs } from 'vue'
+
+export default defineComponent({
+  name: 'IconFont'
+})
+
 </script>
+
+<script setup lang='ts'>
+const props = defineProps({
+  icon: {
+    type: String,
+    default: ''
+  },
+  shadow: {
+    type: Boolean,
+    default: false
+  },
+  verticalCenter: {
+    type: Boolean,
+    default: false
+  },
+  cursor: {
+    type: Boolean,
+    default: false
+  },
+  disabled: {
+    type: Boolean,
+    default: false
+  }
+})
+
+const emit = defineEmits(['click'])
+
+const { 
+  verticalCenter,
+  cursor,
+  shadow,
+  disabled
+} = toRefs(props)
+
+const getClassName = computed(() => {
+  const className:any[] = []
+  if (verticalCenter.value) {
+    className.push('middle')
+  }
+  if (cursor.value) {
+    className.push('cursor')
+  }
+  if (disabled.value) {
+    className.push('disabled')
+  }
+  return className
+})
+const handleClick = ():void => {
+  !disabled.value && emit('click')
+}
+
+const getAttrs = () => {
+  const attrs: { filter?: String } = {}
+  shadow &&
+  (attrs.filter = 'url(#drop-shadow)')
+
+  return attrs
+}
+
+</script>
+
+
 
 <style lang="scss" scoped>
 .icon-font {

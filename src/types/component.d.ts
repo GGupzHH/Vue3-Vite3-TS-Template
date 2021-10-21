@@ -1,5 +1,5 @@
-declare const _default: {
+declare const component: {
   version: string;
   install: (app: import("vue").App<any>) => void;
 };
-export default _default;
+export default component;

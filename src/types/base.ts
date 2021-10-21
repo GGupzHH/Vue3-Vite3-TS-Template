@@ -1,5 +1,5 @@
-declare const component: {
+declare const comps: {
   install: (app: import("vue").App<any>) => void;
 };
 
-export default component;
+export default comps;

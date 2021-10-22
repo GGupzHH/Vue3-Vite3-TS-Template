@@ -1,4 +1,4 @@
-import { createStore } from 'vuex'
+import { createStore, Module, Store } from 'vuex'
 
 /**
  * plugins mount
@@ -6,14 +6,17 @@ import { createStore } from 'vuex'
 // import plugins from '@/store/plugins'
 import plugins from './plugins'
 
+
+import { StateType } from '@/@types'
+
 /**
  * modules mount
  */
-// import DemoTestModule from 'modules/DemoTest/store'
+import DemoTest from 'modules/DemoTest/store'
 
-const store: any = createStore({
+const store: Store<StateType> = createStore({
   modules: {
-    // DemeTest: DemoTestModule,
+    DemoTest,
   },
   plugins
 })

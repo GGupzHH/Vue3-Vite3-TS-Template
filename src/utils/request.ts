@@ -219,7 +219,7 @@ export function downloadFile (boldData: BlobPart, filename = 'shinewing', type: 
   document.body.removeChild(link)
 }
 
-export function useResHeadersAPI (headers, resData: any) {
+export function useResHeadersAPI (headers: any, resData: any) {
   const disposition = headers['content-disposition']
   if (disposition) {
     let filename: string | null = ''

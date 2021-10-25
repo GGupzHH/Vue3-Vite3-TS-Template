@@ -27,9 +27,10 @@
 //   getCurrentInstance,
 //   reactive
 // } from 'vue'
+import { StateType } from '@/@types'
 import { useStore } from 'vuex'
 
-const store = useStore()
+const store = useStore<StateType>()
 
 console.log(store.state.DemoTest)
 console.log(store.state.DemoTest)

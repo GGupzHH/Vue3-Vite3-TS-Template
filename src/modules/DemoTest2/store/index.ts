@@ -1,11 +1,11 @@
 import { StateType } from '@/@types'
 // import { getDemoTestList } from 'modules/DemoTest/api'
-import MUTATION from 'modules/DemoTest/store/mutations-type'
+import MUTATION from 'modules/DemoTest2/store/mutations-type'
 import { filterResponse } from '@/store/utils/mixin'
 import { Module } from 'vuex'
 
 const state = {
-  demoList: [
+  demoList2: [
     1,
     2,
     3,
@@ -13,11 +13,10 @@ const state = {
   ]
 }
 
-// typeof操作符可以用来获取一个变量或对象的类型。
-export type DemoTestType = typeof state
+export type DemoTest2Type = typeof state
 
 
-const DemoTest: Module<DemoTestType, StateType> = {
+const DemoTest2: Module<DemoTest2Type, StateType> = {
   namespaced: true,
   state,
   getters: {
@@ -25,7 +24,7 @@ const DemoTest: Module<DemoTestType, StateType> = {
   },
   actions: {
     aaa(store) {
-      console.log(store.state.demoList)
+      console.log(store.state)
     },
     async GetModuleTestList ({ commit }, params) {
       // TODO: 模拟响应时间
@@ -42,10 +41,13 @@ const DemoTest: Module<DemoTestType, StateType> = {
   },
   mutations: {
     [MUTATION.SET_DEMO_LIST] (state, demoList) {
-      state.demoList = demoList
+      // state.demoList = demoList
     },
+    [MUTATION.SET_DEMO_LIST]() {
+      
+    }
   },
   ...filterResponse
 }
 
-export default DemoTest
+export default DemoTest2

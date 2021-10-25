@@ -34,6 +34,7 @@ const store = useStore<StateType>()
 
 console.log(store.state.DemoTest)
 console.log(store.state.DemoTest)
+console.log(store.state.DemoTest2.demoList2)
 // // import DemoTestModule from '@/modules/DemoTest/store'
 
 // export default defineComponent({

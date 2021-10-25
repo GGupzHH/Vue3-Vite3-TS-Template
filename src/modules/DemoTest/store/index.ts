@@ -13,6 +13,7 @@ const state = {
   ]
 }
 
+// typeof操作符可以用来获取一个变量或对象的类型。
 export type DemoTestType = typeof state
 
 

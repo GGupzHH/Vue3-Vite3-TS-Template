@@ -11,7 +11,8 @@ declare interface IRequestData {
   msg: string
 }
 
-// vuex state 的模块的类型
+// vuex state 的模块的类型 
+// 使用 typeof  获取模块的里面的属性生成类型 
 type ModuleType = {
   DemoTest: DemoTestType
   DemoTest2: DemoTest2Type

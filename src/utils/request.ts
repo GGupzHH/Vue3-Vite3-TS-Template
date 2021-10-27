@@ -1,4 +1,4 @@
-import axios, { Axios, AxiosRequestConfig } from 'axios'
+import axios, { Axios, AxiosInstance, AxiosRequestConfig } from 'axios'
 import Cookie from 'js-cookie'
 
 import { camelizeKeys, decamelizeKeys } from './camelCase'
@@ -48,7 +48,7 @@ const codeMessage: { [key: number]: string} = {
 }
 
 // 创建axios实例
-const service: Axios = axios.create({
+const service: AxiosInstance = axios.create({
   // api 的 base_url
   // baseURL: import.meta.env.VITE_BASE_API,
   baseURL: '/api',
@@ -101,7 +101,7 @@ service.interceptors.response.use(
     const msg: string = data.msg || ''
     if (msg.indexOf('user not log in') !== -1 && data.error === -1) {
       // TODO 写死的  之后要根据语言跳转
-      errorRedirect('en/login')
+      errorRedirect('login')
       return
     }
     Promise.resolve().then(() => {

@@ -1,5 +1,7 @@
 import { StateType } from '@/@types'
-// import { getDemoTestList } from 'modules/DemoTest/api'
+import {
+  getDemoTestList
+} from 'modules/DemoTest/api'
 import MUTATION from 'modules/DemoTest/store/mutations-type'
 import { filterResponse } from '@/store/utils/mixin'
 import { Module } from 'vuex'
@@ -31,7 +33,7 @@ const DemoTest: Module<DemoTestType, StateType> = {
       // TODO: 模拟响应时间
       // await sleep(1000)
       // TODO: 模拟 api
-      // const result = await getDemoTestList(params)
+      const result = await getDemoTestList(params)
       // const result = {
       //   test: 'ok'
       // }

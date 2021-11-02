@@ -1,9 +1,9 @@
 import { DemoTestType } from "@/modules/DemoTest/store";
 import { DemoTest2Type } from "@/modules/DemoTest2/store";
 
-export interface comps {
-  install: (app: import("vue").App<any>) => void
-}
+// export interface comps {
+//   install: (app: import("vue").App<any>) => void
+// }
 
 export interface IRequestData {
   error: number

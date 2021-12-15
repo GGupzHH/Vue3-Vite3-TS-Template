@@ -1,4 +1,3 @@
-
 // Only variables can be placed here,
 // and other files such as themes cannot be introduced,
 // otherwise it will affect the packaging speed.
@@ -17,27 +16,40 @@ $--border-color-light: #dfe4ed;
 $--border-color-lighter: #e6ebf5;
 $--table-border: 1px solid #dfe6ec;
 
-// $--colors: (
-//   "primary": (
-//     "base": #F37021,
-//   ),
-//   "success": (
-//     "base": #67c23a,
-//   ),
-//   "warning": (
-//     "base": #e6a23c,
-//   ),
-//   "danger": (
-//     "base": #f56c6c,
-//   ),
-//   "error": (
-//     "base": #db2828,
-//   ),
-//   "info": (
-//     "base": #909399,
-//   ),
-// );
-
 // :export {
 //   colorPrimary: $--color-primary;
 // }
+
+// 按需导入，重写覆盖自己所需样式
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    "primary": (
+      "base": $--color-primary,
+    ),
+    "success": (
+      "base":  $--color-success,
+    ),
+    "warning": (
+      "base": $--color-warning,
+    ),
+    "danger": (
+      "base":  $--color-danger,
+    ),
+    "info": (
+      "base": $--color-info,
+    ),
+    
+  ),
+  $text-color: (
+    'primary': red,
+    'regular': #606266,
+    'secondary': #909399,
+    'placeholder': #c0c4cc,
+  ),
+  $border-radius: (
+    'base': 4px,
+    'small': 2px,
+    'round': 20px,
+    'circle': 100%,
+  ),
+);

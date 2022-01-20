@@ -17,7 +17,8 @@ const routes: Array<RouteRecordRaw & CustomizeRouter> = [
     children: [
       {
         path: 'test',
-        component: () => import('@/modules/DemoTest/pages/list.vue')
+        component: () => import('@/modules/DemoTest/pages/list.vue'),
+        icon: '2133'
       }
     ]
   },

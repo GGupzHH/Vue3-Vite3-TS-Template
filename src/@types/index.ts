@@ -1,6 +1,7 @@
 import { DemoTestType } from '@/modules/DemoTest/store'
 import { DemoTest2Type } from '@/modules/DemoTest2/store'
 import { filterResponseTypes } from '@/store/utils/mixin'
+import { RouteRecordRaw } from 'vue-router'
 export interface IRequestData {
   error: number
   data: any
@@ -23,12 +24,13 @@ declare module 'axios' {
   }
 }
 
-declare module 'pinia' {
-  export interface PiniaCustomProperties {
-    filterResponse?: filterResponseTypes
-  }
-}
+// declare module 'pinia' {
+//   export interface PiniaCustomProperties {
+//     filterResponse?: filterResponseTypes
+//   }
+// }
 
 export type CustomizeRouter = {
   icon?: string
+  children?: Array<RouteRecordRaw & CustomizeRouter>
 }

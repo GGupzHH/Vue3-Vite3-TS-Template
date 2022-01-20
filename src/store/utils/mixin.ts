@@ -21,3 +21,5 @@ export function filterResponse(
     resolve(res)
   })
 }
+
+export type filterResponseTypes = typeof filterResponse

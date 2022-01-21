@@ -4,7 +4,7 @@ import App from './App.vue'
 import router from '@/router'
 import 'router/permission'
 
-import store from '@/store'
+import pinia from '@/store'
 
 import '@/assets/fonts'
 
@@ -16,7 +16,7 @@ const app = createApp(App)
 
 app
   .use(router)
-  .use(store)
+  .use(pinia)
 
 app
   .use(ElementPlus)

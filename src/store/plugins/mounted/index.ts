@@ -6,12 +6,10 @@
 // import { filterResponse } from '@/store/utils/mixin'
 // import router from '@/router'
 import { filterResponse } from '@/store/utils/mixin'
-import router from '@/router'
+import { PiniaPluginContext } from 'pinia'
 
-
-const mixinVuex = (store: any):void => {
-  store.filterResponse = filterResponse
-  store.router = router
+const piniaPlugins = (context: PiniaPluginContext):void => {
+  context.store.filterResponse = filterResponse
 }
 
-export default mixinVuex
+export default piniaPlugins

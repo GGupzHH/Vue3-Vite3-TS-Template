@@ -19,7 +19,30 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
+import { defineComponent } from 'vue'
+import {
+  DemoTest2Type,
+  useDemoTest2
+} from '@/modules/DemoTest2/store'
+
+export default defineComponent({
+  name: 'DemoTest2',
+  setup () {
+    const useDemoTest2Store = useDemoTest2()
+    const handleClick = (store: DemoTest2Type) => {
+
+      console.log(store)
+    }
+    const a = useDemoTest2Store.names
+
+    return {
+      handleClick,
+      a
+    }
+  }
+})
+
 // import {
 //   defineComponent,
 //   computed,
@@ -27,14 +50,7 @@
 //   getCurrentInstance,
 //   reactive
 // } from 'vue'
-import { StateType } from '@/@types'
-import { useStore } from 'vuex'
 
-const store = useStore<StateType>()
-
-console.log(store.state.DemoTest)
-console.log(store.state.DemoTest)
-console.log(store.state.DemoTest2.demoList2)
 // // import DemoTestModule from '@/modules/DemoTest/store'
 
 // export default defineComponent({

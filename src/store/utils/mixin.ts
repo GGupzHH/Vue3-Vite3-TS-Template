@@ -3,8 +3,8 @@ import { ElMessage } from 'element-plus'
 
 export function filterResponse(
   res: IRequestData,
-  successCb?: Function | undefined,
-  errorCb?: Function | undefined
+  successCb?: (params?: unknown) => unknown | undefined,
+  errorCb?: (params?: unknown) => unknown | undefined
 ) :Promise<IRequestData>{
   return new Promise((resolve) => {
     if (res && res.error === 0) {

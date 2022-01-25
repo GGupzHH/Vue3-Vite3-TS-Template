@@ -46,7 +46,7 @@ module.exports = {
       }
     ],
     camelcase: ['error', { properties: 'never' }],
-    indent: ['error', 2, { SwitchCase: 1 }],
+    indent: ['warn', 2, { SwitchCase: 1 }],
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
@@ -60,6 +60,9 @@ module.exports = {
         }
       }
     ],
+
+    '@typescript-eslint/no-non-null-assertion': 0,
+    '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-empty-function': 0,
     '@typescript-eslint/semi': ['error', 'never'],
     'vue/no-v-html': 'off',

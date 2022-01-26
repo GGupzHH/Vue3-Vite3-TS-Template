@@ -1,26 +1,11 @@
 import { defineStore } from 'pinia'
 
-// type defineStoreOptionsType = {
-//   state: () => any
-//   actions: {
-//     [key in string]: (this: any) => any
-//   }
-// }
-const state = () => {
-  return {
-    names: 123
-  }
-}
-
-type stateFnType = typeof state
-
-// export type DemoTest2Type = typeof defineStoreOptions.actions & ReturnType<stateFnType>
-
-const defineStoreOptions: {
-  state: stateFnType
-  actions: ThisType<ReturnType<stateFnType>>
-} = {
-  state,
+export const useDemoTest2 = defineStore('DemoTest2', {
+  state: () => {
+    return {
+      names: 123
+    }
+  },
   actions: {
     vddd() {
       console.log(this.names)
@@ -30,6 +15,5 @@ const defineStoreOptions: {
       console.log(this.names)
     }
   }
-}
+})
 
-export const useDemoTest2 = defineStore('DemoTest2', defineStoreOptions)

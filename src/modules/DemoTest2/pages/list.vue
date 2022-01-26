@@ -22,7 +22,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import {
-  DemoTest2Type,
   useDemoTest2
 } from '@/modules/DemoTest2/store'
 
@@ -30,8 +29,7 @@ export default defineComponent({
   name: 'DemoTest2',
   setup () {
     const useDemoTest2Store = useDemoTest2()
-    const handleClick = (store: DemoTest2Type) => {
-
+    const handleClick = (store: typeof useDemoTest2Store) => {
       console.log(store)
     }
     const a = useDemoTest2Store.names

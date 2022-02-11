@@ -20,7 +20,7 @@ specifiers:
   sass: ^1.49.7
   sass-loader: 12.4.0
   typescript: ^4.5.5
-  vite: ^2.8.0
+  vite: ^2.8.1
   vue: ^3.2.30
   vue-router: ^4.0.12
   vue-tsc: ^0.3.0
@@ -44,7 +44,7 @@ devDependencies:
   '@types/nprogress': registry.npmmirror.com/@types/nprogress/0.2.0
   '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.11.0_de5a1ddccd75ca1e499b8b8491d3dcba
   '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.11.0_eslint@8.8.0+typescript@4.5.5
-  '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/1.10.2_vite@2.8.0
+  '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/1.10.2_vite@2.8.1
   eslint: registry.npmmirror.com/eslint/8.8.0
   eslint-plugin-html: registry.npmmirror.com/eslint-plugin-html/6.2.0
   eslint-plugin-import: registry.npmmirror.com/eslint-plugin-import/2.25.4_eslint@8.8.0
@@ -53,7 +53,7 @@ devDependencies:
   sass: registry.npmmirror.com/sass/1.49.7
   sass-loader: registry.npmmirror.com/sass-loader/12.4.0_node-sass@7.0.1+sass@1.49.7
   typescript: registry.npmmirror.com/typescript/4.5.5
-  vite: registry.npmmirror.com/vite/2.8.0_sass@1.49.7
+  vite: registry.npmmirror.com/vite/2.8.1_sass@1.49.7
   vue-tsc: registry.npmmirror.com/vue-tsc/0.3.0_typescript@4.5.5
 
 packages:
@@ -152,10 +152,10 @@ packages:
       vue: registry.npmmirror.com/vue/3.2.30
     dev: false
 
-  registry.npmmirror.com/@emmetio/abbreviation/2.2.2:
-    resolution: {integrity: sha512-TtE/dBnkTCct8+LntkqVrwqQao6EnPAs1YN3cUgxOxTaBlesBCY37ROUAVZrRlG64GNnVShdl/b70RfAI3w5lw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@emmetio/abbreviation/-/abbreviation-2.2.2.tgz}
+  registry.npmmirror.com/@emmetio/abbreviation/2.2.3:
+    resolution: {integrity: sha512-87pltuCPt99aL+y9xS6GPZ+Wmmyhll2WXH73gG/xpGcQ84DRnptBsI2r0BeIQ0EB/SQTOe2ANPqFqj3Rj5FOGA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@emmetio/abbreviation/-/abbreviation-2.2.3.tgz}
     name: '@emmetio/abbreviation'
-    version: 2.2.2
+    version: 2.2.3
     dependencies:
       '@emmetio/scanner': registry.npmmirror.com/@emmetio/scanner/1.0.0
     dev: true
@@ -235,11 +235,10 @@ packages:
       fastq: registry.npmmirror.com/fastq/1.13.0
     dev: true
 
-  registry.npmmirror.com/@npmcli/fs/1.1.0:
-    resolution: {integrity: sha512-VhP1qZLXcrXRIaPoqb4YA55JQxLNF3jNR4T55IdOJa3+IFJKNYHtPvtXx8slmeMavj37vCzCfrqQM1vWLsYKLA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@npmcli/fs/-/fs-1.1.0.tgz}
+  registry.npmmirror.com/@npmcli/fs/1.1.1:
+    resolution: {integrity: sha512-8KG5RD0GVP4ydEzRn/I4BNDuxDtqVbOdm8675T49OIG/NGhaK0pjPX7ZcDlvKYbA+ulvVK3ztfcF4uBdOxuJbQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@npmcli/fs/-/fs-1.1.1.tgz}
     name: '@npmcli/fs'
-    version: 1.1.0
-    engines: {node: ^12.13.0 || ^14.15.0 || >=16}
+    version: 1.1.1
     dependencies:
       '@gar/promisify': registry.npmmirror.com/@gar/promisify/1.1.2
       semver: registry.npmmirror.com/semver/7.3.5
@@ -457,7 +456,7 @@ packages:
       eslint-visitor-keys: registry.npmmirror.com/eslint-visitor-keys/3.2.0
     dev: true
 
-  registry.npmmirror.com/@vitejs/plugin-vue/1.10.2_vite@2.8.0:
+  registry.npmmirror.com/@vitejs/plugin-vue/1.10.2_vite@2.8.1:
     resolution: {integrity: sha512-/QJ0Z9qfhAFtKRY+r57ziY4BSbGUTGsPRMpB/Ron3QPwBZM4OZAZHdTa4a8PafCwU5DTatXG8TMDoP8z+oDqJw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vitejs/plugin-vue/-/plugin-vue-1.10.2.tgz}
     id: registry.npmmirror.com/@vitejs/plugin-vue/1.10.2
     name: '@vitejs/plugin-vue'
@@ -466,7 +465,7 @@ packages:
     peerDependencies:
       vite: ^2.5.10
     dependencies:
-      vite: registry.npmmirror.com/vite/2.8.0_sass@1.49.7
+      vite: registry.npmmirror.com/vite/2.8.1_sass@1.49.7
     dev: true
 
   registry.npmmirror.com/@volar/code-gen/0.27.24:
@@ -521,7 +520,7 @@ packages:
     name: '@vscode/emmet-helper'
     version: 2.8.3
     dependencies:
-      emmet: registry.npmmirror.com/emmet/2.3.5
+      emmet: registry.npmmirror.com/emmet/2.3.6
       jsonc-parser: registry.npmmirror.com/jsonc-parser/2.3.1
       vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument/1.0.4
       vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types/3.16.0
@@ -573,10 +572,10 @@ packages:
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.30
     dev: false
 
-  registry.npmmirror.com/@vue/devtools-api/6.0.5:
-    resolution: {integrity: sha512-2nM84dzo3B63pKgxwoArlT1d/yqSL0y2lG2GiyyGhwpyPTwkfIuJHlCNbputCoSCNnT6MMfenK1g7nv7Mea19A==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vue/devtools-api/-/devtools-api-6.0.5.tgz}
+  registry.npmmirror.com/@vue/devtools-api/6.0.6:
+    resolution: {integrity: sha512-QxGATXEuANiVhnc+8PrddyZsyOjMa8ftBXJohl9X7fG0CnlUK2kmKaRfHsKagmkfEpBg74xMkqrkVTEMJYdAWQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vue/devtools-api/-/devtools-api-6.0.6.tgz}
     name: '@vue/devtools-api'
-    version: 6.0.5
+    version: 6.0.6
     dev: false
 
   registry.npmmirror.com/@vue/reactivity-transform/3.2.30:
@@ -972,7 +971,7 @@ packages:
     version: 15.3.0
     engines: {node: '>= 10'}
     dependencies:
-      '@npmcli/fs': registry.npmmirror.com/@npmcli/fs/1.1.0
+      '@npmcli/fs': registry.npmmirror.com/@npmcli/fs/1.1.1
       '@npmcli/move-file': registry.npmmirror.com/@npmcli/move-file/1.1.2
       chownr: registry.npmmirror.com/chownr/2.0.0
       fs-minipass: registry.npmmirror.com/fs-minipass/2.1.0
@@ -1389,12 +1388,12 @@ packages:
       - '@vue/composition-api'
     dev: false
 
-  registry.npmmirror.com/emmet/2.3.5:
-    resolution: {integrity: sha512-LcWfTamJnXIdMfLvJEC5Ld3hY5/KHXgv1L1bp6I7eEvB0ZhacHZ1kX0BYovJ8FroEsreLcq7n7kZhRMsf6jkXQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/emmet/-/emmet-2.3.5.tgz}
+  registry.npmmirror.com/emmet/2.3.6:
+    resolution: {integrity: sha512-pLS4PBPDdxuUAmw7Me7+TcHbykTsBKN/S9XJbUOMFQrNv9MoshzyMFK/R57JBm94/6HSL4vHnDeEmxlC82NQ4A==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/emmet/-/emmet-2.3.6.tgz}
     name: emmet
-    version: 2.3.5
+    version: 2.3.6
     dependencies:
-      '@emmetio/abbreviation': registry.npmmirror.com/@emmetio/abbreviation/2.2.2
+      '@emmetio/abbreviation': registry.npmmirror.com/@emmetio/abbreviation/2.2.3
       '@emmetio/css-abbreviation': registry.npmmirror.com/@emmetio/css-abbreviation/2.1.4
     dev: true
 
@@ -3552,7 +3551,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.0.5
+      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.0.6
       typescript: registry.npmmirror.com/typescript/4.5.5
       vue: registry.npmmirror.com/vue/3.2.30
       vue-demi: registry.npmmirror.com/vue-demi/0.12.1_vue@3.2.30
@@ -4574,11 +4573,11 @@ packages:
       extsprintf: registry.npmmirror.com/extsprintf/1.3.0
     dev: true
 
-  registry.npmmirror.com/vite/2.8.0_sass@1.49.7:
-    resolution: {integrity: sha512-ed5rjyeysttuPJX/aKSA0gTB/8ZKLM5xF6FtEuKy1B9DiQbDNFMVMQxnb9JesgBPUMMIJxC8w5KZ/KNWLKFXoA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-2.8.0.tgz}
-    id: registry.npmmirror.com/vite/2.8.0
+  registry.npmmirror.com/vite/2.8.1_sass@1.49.7:
+    resolution: {integrity: sha512-Typ8qjUnW0p53gBsJpisrKcZlEbUPZATja9BG6Z09QZjg9YrnEn/htkr/VH4WhnH7eNUQeSD+wKI1lHzQRWskw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-2.8.1.tgz}
+    id: registry.npmmirror.com/vite/2.8.1
     name: vite
-    version: 2.8.0
+    version: 2.8.1
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
@@ -4609,10 +4608,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  registry.npmmirror.com/vscode-css-languageservice/5.1.12:
-    resolution: {integrity: sha512-293C5C2732Rbhh3opTs+nQBpC5Dd+oYrEA8lc0OWdyt40oYmJ331FV7NMF1SLFSIcOFB5XveLiWUZak2oyc49Q==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-css-languageservice/-/vscode-css-languageservice-5.1.12.tgz}
+  registry.npmmirror.com/vscode-css-languageservice/5.1.13:
+    resolution: {integrity: sha512-FA0foqMzMmEoO0WJP+MjoD4dRERhKS+Ag+yBrtmWQDmw2OuZ1R/5FkvI/XdTkCpHmTD9VMczugpHRejQyTXCNQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-css-languageservice/-/vscode-css-languageservice-5.1.13.tgz}
     name: vscode-css-languageservice
-    version: 5.1.12
+    version: 5.1.13
     dependencies:
       vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument/1.0.4
       vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types/3.16.0
@@ -4746,7 +4745,7 @@ packages:
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.30
       request-light: registry.npmmirror.com/request-light/0.5.7
       upath: registry.npmmirror.com/upath/2.0.1
-      vscode-css-languageservice: registry.npmmirror.com/vscode-css-languageservice/5.1.12
+      vscode-css-languageservice: registry.npmmirror.com/vscode-css-languageservice/5.1.13
       vscode-html-languageservice: registry.npmmirror.com/vscode-html-languageservice/4.2.1
       vscode-json-languageservice: registry.npmmirror.com/vscode-json-languageservice/4.2.0
       vscode-languageserver: registry.npmmirror.com/vscode-languageserver/8.0.0-next.8
@@ -4802,7 +4801,7 @@ packages:
     peerDependencies:
       vue: ^3.0.0
     dependencies:
-      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.0.5
+      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.0.6
       vue: registry.npmmirror.com/vue/3.2.30
     dev: false
 
@@ -4852,7 +4851,7 @@ packages:
     peerDependencies:
       vue: ^3.0.2
     dependencies:
-      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.0.5
+      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.0.6
       vue: registry.npmmirror.com/vue/3.2.30
     dev: false
 

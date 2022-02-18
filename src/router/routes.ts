@@ -28,4 +28,5 @@ const routes: Array<RouteRecordRaw & CustomizeRouter> = [
     component: defineAsyncComponent(() => import('comps/404.vue'))
   }
 ]
+
 export default routes

@@ -9,12 +9,12 @@
 ### 前置
   - 安装依赖
     ```
-    yarn 
+    pnpm 
     ``` 
 
 ### 运行
   - 启动
     ```
-      yarn serve
+      pnpm serve
     ```
 

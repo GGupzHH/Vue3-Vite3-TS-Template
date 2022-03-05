@@ -608,11 +608,11 @@ packages:
     name: '@vue/shared'
     version: 3.2.31
 
-  registry.npmmirror.com/@vueuse/core/7.7.0_vue@3.2.31:
-    resolution: {integrity: sha512-DS8+dg758CiWnswebYHjS05PqTtc1ZLomsDlkFjG/KC0iFRgFIsGC66AAGuSXLqWCoirp2xN6N2mkrp1aHdI7A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vueuse/core/-/core-7.7.0.tgz}
-    id: registry.npmmirror.com/@vueuse/core/7.7.0
+  registry.npmmirror.com/@vueuse/core/7.7.1_vue@3.2.31:
+    resolution: {integrity: sha512-PRRgbATMpoeUmkCEBtUeJgOwtew8s+4UsEd+Pm7MhkjL2ihCNrSqxNVtM6NFE4uP2sWnkGcZpCjPuNSxowJ1Ow==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vueuse/core/-/core-7.7.1.tgz}
+    id: registry.npmmirror.com/@vueuse/core/7.7.1
     name: '@vueuse/core'
-    version: 7.7.0
+    version: 7.7.1
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
@@ -622,16 +622,16 @@ packages:
       vue:
         optional: true
     dependencies:
-      '@vueuse/shared': registry.npmmirror.com/@vueuse/shared/7.7.0_vue@3.2.31
+      '@vueuse/shared': registry.npmmirror.com/@vueuse/shared/7.7.1_vue@3.2.31
       vue: registry.npmmirror.com/vue/3.2.31
       vue-demi: registry.npmmirror.com/vue-demi/0.12.1_vue@3.2.31
     dev: false
 
-  registry.npmmirror.com/@vueuse/shared/7.7.0_vue@3.2.31:
-    resolution: {integrity: sha512-ANzMcUnjuUPJ9nWqMAqYt8p0qon6AH5pP5/V/0RSWkwCIWZwi57ujIaxizzMwnJECUF/73BmsRmpvvtokCIrKw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vueuse/shared/-/shared-7.7.0.tgz}
-    id: registry.npmmirror.com/@vueuse/shared/7.7.0
+  registry.npmmirror.com/@vueuse/shared/7.7.1_vue@3.2.31:
+    resolution: {integrity: sha512-rN2qd22AUl7VdBxihagWyhUNHCyVk9IpvBTTfHoLH9G7rGE552X1f+zeCfehuno0zXif13jPw+icW/wn2a0rnQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vueuse/shared/-/shared-7.7.1.tgz}
+    id: registry.npmmirror.com/@vueuse/shared/7.7.1
     name: '@vueuse/shared'
-    version: 7.7.0
+    version: 7.7.1
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
@@ -1359,7 +1359,7 @@ packages:
     dependencies:
       '@element-plus/icons-vue': registry.npmmirror.com/@element-plus/icons-vue/0.2.7_vue@3.2.31
       '@popperjs/core': registry.npmmirror.com/@popperjs/core/2.11.2
-      '@vueuse/core': registry.npmmirror.com/@vueuse/core/7.7.0_vue@3.2.31
+      '@vueuse/core': registry.npmmirror.com/@vueuse/core/7.7.1_vue@3.2.31
       async-validator: registry.npmmirror.com/async-validator/4.0.7
       dayjs: registry.npmmirror.com/dayjs/1.10.8
       lodash: registry.npmmirror.com/lodash/4.17.21

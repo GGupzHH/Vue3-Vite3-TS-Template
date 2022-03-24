@@ -291,10 +291,10 @@ packages:
     version: 1.2.2
     dev: true
 
-  registry.npmmirror.com/@types/node/17.0.22:
-    resolution: {integrity: sha512-8FwbVoG4fy+ykY86XCAclKZDORttqE5/s7dyWZKLXTdv3vRy5HozBEinG5IqhvPXXzIZEcTVbuHlQEI6iuwcmw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-17.0.22.tgz}
+  registry.npmmirror.com/@types/node/17.0.23:
+    resolution: {integrity: sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-17.0.23.tgz}
     name: '@types/node'
-    version: 17.0.22
+    version: 17.0.23
     dev: false
 
   registry.npmmirror.com/@types/normalize-package-data/2.4.1:
@@ -2761,7 +2761,7 @@ packages:
     version: 26.6.2
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node/17.0.22
+      '@types/node': registry.npmmirror.com/@types/node/17.0.23
       merge-stream: registry.npmmirror.com/merge-stream/2.0.0
       supports-color: registry.npmmirror.com/supports-color/7.2.0
     dev: false
@@ -4613,10 +4613,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  registry.npmmirror.com/vscode-css-languageservice/5.2.0:
-    resolution: {integrity: sha512-FR5yDEfzbXJtYmZYrA7JWFcRSLHsJw3nv55XAmx7qdwRpFj9yy0ulKfN/NUUdiZW2jZU2fD/+Y4VJYPdafHDag==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-css-languageservice/-/vscode-css-languageservice-5.2.0.tgz}
+  registry.npmmirror.com/vscode-css-languageservice/5.3.0:
+    resolution: {integrity: sha512-ujWW855AoJlE4ETU17Gff7unlZZTHDA0w26itk9EQFMfJqi9lE6S67zOsMvcPmJf55MrnGQbojDYZRiDVaFjdA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-css-languageservice/-/vscode-css-languageservice-5.3.0.tgz}
     name: vscode-css-languageservice
-    version: 5.2.0
+    version: 5.3.0
     dependencies:
       vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument/1.0.4
       vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types/3.16.0
@@ -4753,7 +4753,7 @@ packages:
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.31
       request-light: registry.npmmirror.com/request-light/0.5.7
       upath: registry.npmmirror.com/upath/2.0.1
-      vscode-css-languageservice: registry.npmmirror.com/vscode-css-languageservice/5.2.0
+      vscode-css-languageservice: registry.npmmirror.com/vscode-css-languageservice/5.3.0
       vscode-html-languageservice: registry.npmmirror.com/vscode-html-languageservice/4.2.4
       vscode-json-languageservice: registry.npmmirror.com/vscode-json-languageservice/4.2.1
       vscode-languageserver: registry.npmmirror.com/vscode-languageserver/8.0.0-next.10

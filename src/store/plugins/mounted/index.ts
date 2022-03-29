@@ -8,7 +8,7 @@
 import { filterResponse } from '@/store/utils/mixin'
 import { PiniaPluginContext } from 'pinia'
 
-const piniaPlugins = (context: PiniaPluginContext):void => {
+const piniaPlugins = (context: PiniaPluginContext): void => {
   context.store.filterResponse = filterResponse
 }
 

@@ -1,26 +1,27 @@
 import { filterResponseTypes } from '@/store/utils/mixin'
 
-import { RouteRecordRaw } from 'vue-router'
-
 export interface IRequestData {
-  error: number
+  error?: number
   data: any
-  msg: string
+  msg?: string
 }
 
 declare module 'axios' {
   export interface AxiosRequestConfig {
     redirect?: string
   }
+
+  export interface AxiosResponse<T extends IRequestData> {
+    data: T
+  }
 }
 
 declare module 'pinia' {
   export interface PiniaCustomProperties {
-    filterResponse?: filterResponseTypes
+    filterResponse: filterResponseTypes
   }
 }
 
 export type CustomizeRouter = {
   icon?: string
-  children?: Array<RouteRecordRaw & CustomizeRouter>
 }

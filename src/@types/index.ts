@@ -10,10 +10,6 @@ declare module 'axios' {
   export interface AxiosRequestConfig {
     redirect?: string
   }
-
-  export interface AxiosResponse<T extends IRequestData> {
-    data: T
-  }
 }
 
 declare module 'pinia' {

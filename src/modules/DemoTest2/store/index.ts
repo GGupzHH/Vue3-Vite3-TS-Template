@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { getDemoTestList } from 'modules/DemoTest2/api'
 
 export const useDemoTest2 = defineStore('DemoTest2', {
   state: () => {
@@ -13,6 +14,10 @@ export const useDemoTest2 = defineStore('DemoTest2', {
     aaa() {
       console.log(this.vddd())
       console.log(this.names)
+    },
+    async getDemoTestList() {
+      const res = await getDemoTestList({})
+      return this.filterResponse(res)
     }
   }
 })

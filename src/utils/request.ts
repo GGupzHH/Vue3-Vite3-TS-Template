@@ -1,4 +1,4 @@
-import axios, { Axios, AxiosInstance, AxiosRequestConfig } from 'axios'
+import axios, { Axios, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import Cookie from 'js-cookie'
 
 import { camelizeKeys, decamelizeKeys } from './camelCase'
@@ -10,7 +10,9 @@ function errorRedirect (url: string) {
   Router.push(`/${url}`)
 }
 // code Message
-const codeMessage: { [key: number]: string} = {
+const codeMessage: {
+  [key: number]: string
+} = {
   // 200: '服务器成功返回请求的数据。',
   200: 'The server successfully returned the requested data.',
   // 201: '新建或修改数据成功。',
@@ -86,7 +88,7 @@ service.interceptors.request.use<AxiosRequestConfig>(
 )
 
 // respone拦截器
-service.interceptors.response.use(
+service.interceptors.response.use<AxiosResponse<IRequestData>>(
   response => {
     /**
      * response data

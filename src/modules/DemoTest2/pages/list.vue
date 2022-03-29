@@ -33,6 +33,10 @@ export default defineComponent({
       console.log(store)
     }
     const a = useDemoTest2Store.names
+    const res = useDemoTest2Store.getDemoTestList()
+    res.then((data) => {
+      console.log(data.data)
+    })
 
     return {
       handleClick,

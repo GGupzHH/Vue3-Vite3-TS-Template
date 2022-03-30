@@ -23,15 +23,15 @@ export type CustomizeRouter = {
   icon?: string
 }
 
-type a<T = any> = { [key in any]: T }
+type ObjectValueSuite<T = any> = { [key in any]: T }
 
 export interface IRequestSuite {
-  get(uri: string, params?: a, config?: AxiosRequestConfig): Promise<IRequestData>
+  get(uri: string, params?: ObjectValueSuite, config?: AxiosRequestConfig): Promise<IRequestData>
   post(uri: string, data?: any, config?: AxiosRequestConfig): Promise<IRequestData>
   put(uri: string, data?: any, config?: AxiosRequestConfig): Promise<IRequestData>
   patch(uri: string, data?: any, config?: AxiosRequestConfig): Promise<IRequestData>
   delete(uri: string, config?: AxiosRequestConfig): Promise<IRequestData>
 }
 
-export type IModulesApiSuite = a<(...args: any) => Promise<IRequestData>>
+export type IModulesApiSuite = ObjectValueSuite<(...args: any) => Promise<IRequestData>>
 

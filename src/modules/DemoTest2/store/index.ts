@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { getDemoTestList } from 'modules/DemoTest2/api'
+import DemoTest2Api from 'modules/DemoTest2/api'
 
 export const useDemoTest2 = defineStore('DemoTest2', {
   state: () => {
@@ -16,7 +16,7 @@ export const useDemoTest2 = defineStore('DemoTest2', {
       console.log(this.names)
     },
     async getDemoTestList() {
-      const res = await getDemoTestList({})
+      const res = await DemoTest2Api.getDemoTestList({})
       return this.filterResponse(res)
     }
   }

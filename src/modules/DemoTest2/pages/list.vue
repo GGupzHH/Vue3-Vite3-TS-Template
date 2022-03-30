@@ -35,7 +35,7 @@ export default defineComponent({
     const a = useDemoTest2Store.names
     const res = useDemoTest2Store.getDemoTestList()
     res.then((data) => {
-      console.log(data.data)
+      console.log(data)
     })
 
     return {

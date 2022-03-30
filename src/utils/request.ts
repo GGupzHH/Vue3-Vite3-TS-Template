@@ -3,7 +3,7 @@ import Cookie from 'js-cookie'
 
 import { camelizeKeys, decamelizeKeys } from './camelCase'
 import Router from '../router/index'
-import { IRequestData } from '@/@types'
+import { IRequestData, IRequestSuite } from '@/@types'
 
 // redirect error
 function errorRedirect (url: string) {
@@ -112,7 +112,7 @@ service.interceptors.response.use<AxiosResponse<IRequestData>>(
 
     if (
       response.request.responseType === 'blob' &&
-      /json$/gi.test(response.headers['content-type'])
+  /json$/gi.test(response.headers['content-type'])
     ) {
       return new Promise(resolve => {
         const reader = new FileReader()
@@ -237,4 +237,25 @@ export function useResHeadersAPI (headers: any, resData: any) {
   }
 }
 
-export default service
+const requestSuite: IRequestSuite = {
+  get (uri, params, config) {
+    return service.get(uri, {
+      params,
+      ...config
+    })
+  },
+  post (uri, data, config) {
+    return service.post(uri, data, config)
+  },
+  put (uri, data, config) {
+    return service.put(uri, data, config)
+  },
+  patch(uri, data, config) {
+    return service.patch(uri, data,config)
+  },
+  delete(uri, config) {
+    return service.delete(uri, config)
+  }
+}
+
+export default requestSuite

@@ -1,15 +1,5 @@
-import { IRequestData } from '@/@types'
+import { IModulesApiSuite, IRequestData } from '@/@types'
 import request from '@/utils/request'
-import { AxiosPromise } from 'axios'
-
-export function getDemoTestList (params: any): Promise<IRequestData> {
-  return request({
-    url: '/api/demo_test/list',
-    method: 'get',
-    params,
-    redirect: '404'
-  })
-}
 
 // export function createDemoTest (data) {
 //   return request({
@@ -33,3 +23,16 @@ export function getDemoTestList (params: any): Promise<IRequestData> {
 //     method: 'delete'
 //   })
 // }
+
+const DemoTest2Api = {
+  getDemoTestList(params: any) {
+    return request.get('/api/demo_test/list', params, {
+      redirect: '404'
+    })
+  },
+  getDemoTestListID(id: string, params: any) {
+    return request.get(`/api/${id}/list`, params)
+  }
+}
+
+export default DemoTest2Api

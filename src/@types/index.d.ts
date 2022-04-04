@@ -1,5 +1,6 @@
 import { filterResponseTypes } from '@/store/utils/mixin'
 import { AxiosRequestConfig } from 'axios'
+import { RouteRecordRaw } from 'vue-router'
 
 export interface IRequestData {
   error: number
@@ -19,8 +20,15 @@ declare module 'pinia' {
   }
 }
 
+declare module 'vue-router' {
+  // export interface RouteRecordRaw {
+  //   icon?: 'string'
+  // }
+}
+
 export type CustomizeRouter = {
   icon?: string
+  children?: Array<RouteRecordRaw | CustomizeRouter>
 }
 
 type ObjectValueSuite<T = any> = { [key in any]: T }

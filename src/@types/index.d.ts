@@ -1,11 +1,16 @@
 import { filterResponseTypes } from '@/store/utils/mixin'
 import { AxiosRequestConfig } from 'axios'
 import { RouteRecordRaw } from 'vue-router'
+import { ComponentPublicInstance } from 'vue'
 
 export interface IRequestData {
   error: number
   data: any
   msg: string
+}
+// $ModalDialog
+declare module 'vue' {
+  export type ComponentPublicInstanceCostom = ComponentPublicInstance<{ $ModalDialog: any; }>
 }
 
 declare module 'axios' {

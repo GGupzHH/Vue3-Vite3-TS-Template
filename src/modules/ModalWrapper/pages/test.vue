@@ -7,7 +7,7 @@
   </el-button>
 </template>
 <script lang="ts">
-import { defineComponent, getCurrentInstance, onBeforeMount, reactive } from 'vue'
+import { ComponentPublicInstance, ComponentPublicInstanceCostom, defineComponent, getCurrentInstance, onBeforeMount, reactive } from 'vue'
 import { ElMessage } from 'element-plus'
 
 import SnippetModal from '@/modules/ModalWrapper/components/SnippetModal.vue'
@@ -15,7 +15,7 @@ import SnippetModal from '@/modules/ModalWrapper/components/SnippetModal.vue'
 export default defineComponent({
   name: 'Test',
   setup() {
-    const { proxy } = getCurrentInstance() as any
+    const proxy = getCurrentInstance()?.proxy as ComponentPublicInstanceCostom
 
     const handleClick = () => {
       const formData = reactive({

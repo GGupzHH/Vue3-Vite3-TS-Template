@@ -2,6 +2,7 @@ import { filterResponseTypes } from '@/store/utils/mixin'
 import { AxiosRequestConfig } from 'axios'
 import { RouteRecordRaw } from 'vue-router'
 import { ComponentPublicInstance } from 'vue'
+import { WidgetsPlugins } from '@/widgets/types'
 
 export interface IRequestData {
   error: number
@@ -10,7 +11,8 @@ export interface IRequestData {
 }
 // $ModalDialog
 declare module 'vue' {
-  export type ComponentPublicInstanceCostom = ComponentPublicInstance<{ $ModalDialog: any; }>
+  // FIXME 这里可以再细分一下  不一定是Widgets 也可以是别的自定义插件
+  export type ComponentPublicInstanceCostom = ComponentPublicInstance<WidgetsPlugins>
 }
 
 declare module 'axios' {

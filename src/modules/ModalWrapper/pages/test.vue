@@ -7,7 +7,7 @@
   </el-button>
 </template>
 <script lang="ts">
-import { ComponentPublicInstance, ComponentPublicInstanceCostom, defineComponent, getCurrentInstance, onBeforeMount, reactive } from 'vue'
+import { ComponentPublicInstanceCostom, defineComponent, getCurrentInstance, reactive } from 'vue'
 import { ElMessage } from 'element-plus'
 
 import SnippetModal from '@/modules/ModalWrapper/components/SnippetModal.vue'
@@ -16,7 +16,6 @@ export default defineComponent({
   name: 'Test',
   setup() {
     const proxy = getCurrentInstance()?.proxy as ComponentPublicInstanceCostom
-
     const handleClick = () => {
       const formData = reactive({
         userId: '来自父组件，模拟的，默认ID自动生成',
@@ -29,10 +28,9 @@ export default defineComponent({
       proxy.$ModalDialog({
         title: '测试标题啦',
         maxHeight: 200,
-        'close-on-click-modal': false,
         renderComponent: {
-          component: SnippetModal,
-          data: formData
+          data: formData,
+          component: SnippetModal
         },
         async onConfirm (instance: any) {
           console.log('formData', formData)

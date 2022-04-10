@@ -1,15 +1,16 @@
-import { App, createVNode, render, nextTick } from 'vue'
+import { App, createVNode, render, nextTick, Component, VNode, ComponentPublicInstanceCostom } from 'vue'
 import Modal from '@/widgets/ModalDialog/modal.vue'
+import { ModalDialogOptions, renderComponent } from '../types';
 
-const extractData = (options: { renderComponent: any; }) => {
-  const extractSlotComponents = (renderComponent: any) => {
-    const component: any = {}
-    let componantData = {}
+const extractData = (options: { renderComponent: renderComponent; }) => {
+  const extractSlotComponents = (renderComponent: renderComponent) => {
+    const component: { [ key in string]: Component } = {}
+    let componantData: any = {}
 
     if (renderComponent) {
       const { data } = renderComponent
       componantData = data
-      component[renderComponent.component.name] = renderComponent.component
+      component[renderComponent.component.name as string] = renderComponent.component
     }
 
     return {
@@ -26,14 +27,16 @@ const extractData = (options: { renderComponent: any; }) => {
 }
 
 export default {
-  install (app: App<any>) {
-    app.config.globalProperties.$ModalDialog = function (options: any) {
+  install(app: App<any>) {
+    // FIXME 这里的小部件可以再多套一层 这样类型好定义
+    app.config.globalProperties.$ModalDialog = function (options: ModalDialogOptions) {
       const {
         component,
         componantData
       } = extractData(options)
+      
 
-      let vm: any = createVNode(
+      let vm: VNode = createVNode(
         Modal,
         {
           ...options,
@@ -46,20 +49,23 @@ export default {
       }
 
       let container: any = document.createElement('div')
-      vm.destroy = () => {
-        if (container) render(null, container)
-        container = null
-        vm = null
-        for (const name in component) {
-          delete app._context.components[name]
-        }
-      }
+      // FIXME 组件销毁 有问题
+      // vm.unmounted = () => {
+      //   console.log(1111)
+      //   if (container) render(null, container)
+      //   container = null
+      //   vm = null
+      //   for (const name in component) {
+      //     delete app._context.components[name]
+      //   }
+      // }
       vm.appContext = app._context
       render(vm, container)
       document.body.appendChild(container.firstElementChild)
 
       nextTick(() => {
-        vm.component.proxy.visible = true
+        const proxy = vm.component?.proxy as ComponentPublicInstanceCostom
+        proxy.visible = true
       })
 
       return vm

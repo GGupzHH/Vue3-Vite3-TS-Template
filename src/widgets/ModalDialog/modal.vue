@@ -15,6 +15,7 @@
         v-if="headerIcon"
         :icon="headerIcon"
         class="modal-header__icon"
+        :class="{ waringIcon: headerIconWarn, saveIcon: headerIconSave }"
       />
       <span
         class="modal-header__title"
@@ -24,18 +25,38 @@
       v-loading="fullLoading"
       class="modal-container__body"
     >
-      <component
-        :is="getComponent"
-        ref="refComponent"
-        v-model="componantData"
-        class="modal-container__component"
-      />
+      <div
+        class="modal-box__inner"
+        :class="{
+          'show-border-radius': hideFooter
+        }"
+        :style="{
+          maxHeight: `${isNumberical(maxHeight) ? maxHeight + 'px': maxHeight }`,
+          height: `${isNumberical(height) ? height + 'px': height }`
+        }"
+      >
+        <div
+          v-if="renderHTML"
+          class="modal-container__html"
+          v-html="renderHTML"
+        ></div>
+        <!-- {{ renderHTML }} -->
+        <component
+          :is="getComponent"
+          ref="refComponent"
+          v-model="componantData"
+          class="modal-container__component"
+          :class="{
+            'hide-padding': hidePadding
+          }"
+        />
+      </div>
       <div
         v-if="!hideFooter"
         class="modal-container__footer"
       >
         <el-button
-          type="primary"
+          :type="deleteType ? 'danger' : 'primary'"
           @click="handleConfirm()"
         >
           {{ confirmText || '确定' }}
@@ -52,6 +73,7 @@
 </template>
 
 <script lang="ts">
+import { isNumberical } from '@/utils/type'
 import {
   defineComponent,
   getCurrentInstance,
@@ -59,7 +81,6 @@ import {
   computed,
   reactive
 } from 'vue'
-
 
 export default defineComponent({
   name: 'ModalDialog',
@@ -81,6 +102,14 @@ export default defineComponent({
       type: String,
       default: ''
     },
+    height: {
+      type: [Number, String],
+      default: 'auto'
+    },
+    maxHeight: {
+      type: [Number, String],
+      default: 'auto'
+    },
     dialogWidth: {
       type: String,
       default: '500px'
@@ -89,15 +118,35 @@ export default defineComponent({
       type: Boolean,
       default: false
     },
+    hidePadding: {
+      type: Boolean,
+      default: false
+    },
     hideFooter: {
       type: Boolean,
       default: false
+    },
+    renderHTML: {
+      type: String,
+      default: ''
     },
     componantData: {
       type: Object,
       default () {
         return {}
       }
+    },
+    headerIconWarn: {
+      type: Boolean,
+      default: false
+    },
+    deleteType: {
+      type: Boolean,
+      default: false
+    },
+    headerIconSave: {
+      type: Boolean,
+      default: false
     }
   },
   setup (props, { attrs }: { attrs: any; }) {
@@ -142,6 +191,7 @@ export default defineComponent({
         'onConfirm',
         'onCancel',
         'renderComponent',
+        'renderHTML',
         'components'
       ]
       const resultAttrs = reactive({} as any)
@@ -162,6 +212,8 @@ export default defineComponent({
       getComponent,
       fullLoading,
       refComponent,
+
+      isNumberical,
       handleCancel,
       handleConfirm,
       getOriginAttrs,
@@ -173,9 +225,16 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+
 :deep() {
+  .modal-container__html {
+    padding: 24px;
+  }
   .modal-container__component {
     padding: 24px;
+    &.hide-padding {
+      padding: 0;
+    }
     .el-textarea__inner,
     .el-input__inner  {
       padding: 8px;
@@ -188,11 +247,16 @@ export default defineComponent({
       padding-right: 24px;
       border-top: 1px solid #DCDFE6FF;
   }
+  .modal-box__inner {
+    overflow-y: auto;
+    &.show-border-radius {
+      border-radius: 8px;
+    }
+  }
 }
 </style>
 <style lang="scss">
 .modal-wrapper-containers-dialog {
-  width: 500px;
   border-radius: 8px;
   .el-dialog__header {
     display: flex;
@@ -202,6 +266,12 @@ export default defineComponent({
     .modal-header__icon {
       width: 20px;
       height: 20px;
+    }
+    .waringIcon {
+      color: #FAAD14
+    }
+    .saveIcon {
+      color: #1679D9
     }
     .modal-header__title {
       margin-left: 8px;

@@ -4,7 +4,7 @@ import { ModalDialogOptions, renderComponent } from '../types';
 
 const extractData = (options: { renderComponent: renderComponent; }) => {
   const extractSlotComponents = (renderComponent: renderComponent) => {
-    const component: { [ key in string]: Component } = {}
+    const component: Record<string, Component> = {}
     let componantData: any = {}
 
     if (renderComponent) {

@@ -2,10 +2,7 @@ import request from '@/utils/request'
 // import request from 'utils/request'
 
 export function getDemoTestList<AxiosPromise> (params: any) {
-  return request({
-    url: '/api/demo_test/list',
-    method: 'get',
-    params,
+  return request.get('/api/demo_test/list', params, {
     redirect: '404'
   })
 }

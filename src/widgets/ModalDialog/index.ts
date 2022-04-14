@@ -50,15 +50,15 @@ export default {
 
       let container: any = document.createElement('div')
       // FIXME 组件销毁 有问题
-      // vm.unmounted = () => {
-      //   console.log(1111)
-      //   if (container) render(null, container)
-      //   container = null
-      //   vm = null
-      //   for (const name in component) {
-      //     delete app._context.components[name]
-      //   }
-      // }
+      vm.destroy = () => {
+        if (container) render(null, container)
+        container = null
+        // vm = null
+        for (const name in component) {
+          delete app._context.components[name]
+        }
+      }
+
       vm.appContext = app._context
       render(vm, container)
       document.body.appendChild(container.firstElementChild)

@@ -21,8 +21,8 @@
   "devDependencies": {
     "@types/js-cookie": "^3.0.2",
     "@types/nprogress": "^0.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
-    "@typescript-eslint/parser": "^5.26.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
     "@vitejs/plugin-vue": "^1.10.2",
     "eslint": "^8.16.0",
     "eslint-plugin-html": "^6.2.0",

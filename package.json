@@ -13,7 +13,7 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.0.14",
     "rollup-plugin-terser": "^7.0.2",
-    "vue": "^3.2.36",
+    "vue": "^3.2.37",
     "vue-router": "^4.0.15",
     "vuex": "^4.0.2",
     "vuex-router-sync": "^5.0.0"
@@ -21,18 +21,18 @@
   "devDependencies": {
     "@types/js-cookie": "^3.0.2",
     "@types/nprogress": "^0.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
     "@vitejs/plugin-vue": "^1.10.2",
-    "eslint": "^8.16.0",
+    "eslint": "^8.17.0",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-vue": "^8.7.1",
     "node-sass": "^7.0.1",
-    "sass": "^1.52.1",
+    "sass": "^1.52.2",
     "sass-loader": "12.4.0",
-    "typescript": "^4.7.2",
-    "vite": "^2.9.9",
+    "typescript": "^4.7.3",
+    "vite": "^2.9.10",
     "vue-tsc": "^0.3.0"
   }
 }

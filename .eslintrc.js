@@ -37,6 +37,10 @@ module.exports = {
     'block-spacing': ['error', 'always'],
     'computed-property-spacing': ['error', 'never'],
     'func-call-spacing': ['error', 'never'],
+    'space-before-function-paren': [
+      'error',
+      'never'
+    ],
     'keyword-spacing': [
       'error',
       {

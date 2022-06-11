@@ -132,7 +132,7 @@ export default defineComponent({
     },
     componantData: {
       type: Object,
-      default () {
+      default() {
         return {}
       }
     },
@@ -149,7 +149,7 @@ export default defineComponent({
       default: false
     }
   },
-  setup (props, { attrs }: { attrs: any; }) {
+  setup(props, { attrs }: { attrs: any; }) {
     const { proxy } = getCurrentInstance() as any
     const visible = ref(false)
 
@@ -168,7 +168,7 @@ export default defineComponent({
     const handleCancel = () => {
       visible.value = false
     }
-    const handleConfirm = async () => {
+    const handleConfirm = async() => {
       const instance = refComponent.value
       try {
         await attrs.onConfirm(instance, proxy)

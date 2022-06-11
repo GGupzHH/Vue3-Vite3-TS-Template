@@ -2,7 +2,7 @@
 import IconFont from '@/components/IconFont/index.vue'
 
 const component = {
-  install: function (app: import("vue").App<any>): void {
+  install: function(app: import('vue').App<any>): void {
     app.component(IconFont.name, IconFont)
   }
 }

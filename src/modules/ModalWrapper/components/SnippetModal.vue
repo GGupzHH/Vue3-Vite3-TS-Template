@@ -105,10 +105,10 @@ export default defineComponent({
   },
   setup() {
     const refForm = ref<typeof ElForm>()
-    const validationRules = async () => {
+    const validationRules = async() => {
       return new Promise((resolve) => {
         if (!refForm.value) return
-        refForm.value.validate(async (valid: boolean) => {
+        refForm.value.validate(async(valid: boolean) => {
           if (valid) {
             resolve(true)
           } else {

@@ -1,6 +1,6 @@
 import { App, createVNode, render, nextTick, Component, VNode, ComponentPublicInstanceCostom } from 'vue'
 import Modal from '@/widgets/ModalDialog/modal.vue'
-import { ModalDialogOptions, renderComponent } from '../types';
+import { ModalDialogOptions, renderComponent } from '../types'
 
 const extractData = (options: { renderComponent: renderComponent; }) => {
   const extractSlotComponents = (renderComponent: renderComponent) => {
@@ -29,14 +29,13 @@ const extractData = (options: { renderComponent: renderComponent; }) => {
 export default {
   install(app: App<any>) {
     // FIXME 这里的小部件可以再多套一层 这样类型好定义
-    app.config.globalProperties.$ModalDialog = function (options: ModalDialogOptions) {
+    app.config.globalProperties.$ModalDialog = function(options: ModalDialogOptions) {
       const {
         component,
         componantData
       } = extractData(options)
-      
 
-      let vm: VNode = createVNode(
+      const vm: VNode = createVNode(
         Modal,
         {
           ...options,

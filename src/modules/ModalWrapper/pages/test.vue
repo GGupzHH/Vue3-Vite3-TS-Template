@@ -32,7 +32,7 @@ export default defineComponent({
           data: formData,
           component: SnippetModal
         },
-        async onConfirm (instance: any) {
+        async onConfirm(instance: any) {
           console.log('formData', formData)
           const isValid = await instance.validationRules()
           console.log('isValid', isValid)

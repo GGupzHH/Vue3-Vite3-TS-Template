@@ -27,7 +27,7 @@ import {
 
 export default defineComponent({
   name: 'DemoTest2',
-  setup () {
+  setup() {
     const useDemoTest2Store = useDemoTest2()
     const handleClick = (store: typeof useDemoTest2Store) => {
       console.log(store)

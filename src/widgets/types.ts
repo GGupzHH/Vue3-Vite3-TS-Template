@@ -1,5 +1,4 @@
-import { Component, VNode } from "vue"
-
+import { Component, VNode } from 'vue'
 
 export declare type ModalDialog = {
   (options: ModalDialogOptions): VNode
@@ -31,6 +30,4 @@ export type renderComponent = {
 export type onConfirm = {
   (instance: any): Promise<any>
 }
-
-
 

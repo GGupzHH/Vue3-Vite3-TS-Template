@@ -7,7 +7,7 @@ NProgress.configure({
 })
 console.log(router)
 
-router.beforeEach(async (to, from, next) => {
+router.beforeEach(async(to, from, next) => {
   NProgress.start()
 
   // if (

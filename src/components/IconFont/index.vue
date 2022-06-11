@@ -37,7 +37,6 @@
   </svg>
 </template>
 
-
 <script lang='ts'>
 import { computed, defineComponent, toRefs } from 'vue'
 
@@ -73,7 +72,7 @@ const props = defineProps({
 
 const emit = defineEmits(['click'])
 
-const { 
+const {
   verticalCenter,
   cursor,
   shadow,
@@ -98,7 +97,7 @@ const handleClick = ():void => {
 }
 
 const getAttrs = () => {
-  const attrs: { filter?: String } = {}
+  const attrs: { filter?: string; } = {}
   shadow &&
   (attrs.filter = 'url(#drop-shadow)')
 
@@ -106,8 +105,6 @@ const getAttrs = () => {
 }
 
 </script>
-
-
 
 <style lang="scss" scoped>
 .icon-font {

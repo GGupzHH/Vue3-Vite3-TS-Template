@@ -6,8 +6,8 @@ import Router from '../router/index'
 import { IRequestData, IRequestSuite } from '@/@types'
 
 // redirect error
-function errorRedirect (url: string) {
-  Router.push(`/${url}`)
+function errorRedirect(url: string) {
+  Router.push(`/${ url }`)
 }
 // code Message
 const codeMessage: {
@@ -170,7 +170,7 @@ service.interceptors.response.use<AxiosResponse<IRequestData>>(
   }
 )
 
-export function sleep (time = 0) {
+export function sleep(time = 0) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({})
@@ -178,7 +178,7 @@ export function sleep (time = 0) {
   })
 }
 
-function extractFileNameFromContentDispositionHeader (value: string) {
+function extractFileNameFromContentDispositionHeader(value: string) {
   const patterns = [
     /filename\*=[^']+'\w*'"([^"]+)";?/i,
     /filename\*=[^']+'\w*'([^;]+);?/i,
@@ -203,7 +203,7 @@ function extractFileNameFromContentDispositionHeader (value: string) {
   return null
 }
 
-export function downloadFile (boldData: BlobPart, filename = 'shinewing', type: any) {
+export function downloadFile(boldData: BlobPart, filename = 'shinewing', type: any) {
   // TODO: https://blog.csdn.net/weixin_42142057/article/details/97655591
   const blob = boldData instanceof Blob
     ? boldData
@@ -221,7 +221,7 @@ export function downloadFile (boldData: BlobPart, filename = 'shinewing', type: 
   document.body.removeChild(link)
 }
 
-export function useResHeadersAPI (headers: any, resData: any) {
+export function useResHeadersAPI(headers: any, resData: any) {
   const disposition = headers['content-disposition']
   if (disposition) {
     let filename: string | null = ''
@@ -238,16 +238,16 @@ export function useResHeadersAPI (headers: any, resData: any) {
 }
 
 const requestSuite: IRequestSuite = {
-  get (uri, params, config) {
+  get(uri, params, config) {
     return service.get(uri, {
       params,
       ...config
     })
   },
-  post (uri, data, config) {
+  post(uri, data, config) {
     return service.post(uri, data, config)
   },
-  put (uri, data, config) {
+  put(uri, data, config) {
     return service.put(uri, data, config)
   },
   patch(uri, data, config) {

@@ -31,7 +31,7 @@ const DemoTest2Api = {
     })
   },
   getDemoTestListID(id: string, params: any) {
-    return request.get(`/api/${id}/list`, params)
+    return request.get(`/api/${ id }/list`, params)
   }
 }
 

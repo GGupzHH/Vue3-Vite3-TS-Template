@@ -4,7 +4,8 @@
   "scripts": {
     "serve": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "eslint-fix": "eslint --fix --ext .js,.ts,.jsx,.tsx,.vue ./src"
   },
   "dependencies": {
     "axios": "^0.26.1",

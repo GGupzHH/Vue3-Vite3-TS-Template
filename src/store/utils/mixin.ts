@@ -1,10 +1,12 @@
 import { IRequestData } from '@/@types'
 import { ElMessage } from 'element-plus'
 
+type ICallBack = (res: IRequestData) => Promise<IRequestData>
+
 export function filterResponse(
   res: IRequestData,
-  successCb?: (params?: unknown) => unknown | undefined,
-  errorCb?: (params?: unknown) => unknown | undefined
+  successCb?: ICallBack | undefined,
+  errorCb?: ICallBack | undefined
 ) :Promise<IRequestData>{
   return new Promise((resolve) => {
     if (res && res.error === 0) {

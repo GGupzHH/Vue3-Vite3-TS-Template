@@ -25,14 +25,14 @@
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "@vitejs/plugin-vue": "^1.10.2",
-    "eslint": "^8.17.0",
+    "eslint": "^8.18.0",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-vue": "^8.7.1",
     "node-sass": "^7.0.1",
     "sass": "^1.52.3",
     "sass-loader": "12.4.0",
-    "typescript": "^4.7.3",
+    "typescript": "^4.7.4",
     "vite": "^2.9.12",
     "vue-tsc": "^0.3.0"
   }

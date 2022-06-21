@@ -1,9 +1,12 @@
+/* global
+  IRequestData,
+  IRequestSuite
+*/
 import axios, { Axios, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import Cookie from 'js-cookie'
 
 import { camelizeKeys, decamelizeKeys } from './camelCase'
 import Router from '../router/index'
-import { IRequestData, IRequestSuite } from '@/@types'
 
 // redirect error
 function errorRedirect(url: string) {

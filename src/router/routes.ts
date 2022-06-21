@@ -1,7 +1,9 @@
+/* global
+  CustomizeRouter
+*/
 import { Comment, defineAsyncComponent } from 'vue'
 const Layout = () => import('comps/Layout/index.vue')
 import { RouteRecordRaw } from 'vue-router'
-import { CustomizeRouter } from '@/@types'
 
 /**
  * 为渲染菜单添加的测试路由

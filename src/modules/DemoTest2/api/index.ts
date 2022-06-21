@@ -1,4 +1,3 @@
-import { IModulesApiSuite, IRequestData } from '@/@types'
 import request from '@/utils/request'
 
 const DemoTest2Api = {

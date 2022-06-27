@@ -1,8 +1,19 @@
 import { Component, VNode } from 'vue'
 
-export declare type ModalDialog = {
-  (options: ModalDialogOptions): VNode
-}
+export type ModalDialog = (
+  options: {
+    title: string
+    renderComponent: renderComponent
+    onConfirm: onConfirm
+    top?: string
+    hidePadding?: boolean
+    dialogWidth?: string
+    maxHeight?: string | number
+    height?: string
+    hideFooter?: boolean
+    showClose?: boolean
+  }
+) => VNode
 
 export type WidgetsPlugins = {
   $ModalDialog: ModalDialog
@@ -11,6 +22,8 @@ export type WidgetsPlugins = {
 
 export type ModalDialogOptions = {
   title: string
+  renderComponent: renderComponent
+  onConfirm: onConfirm
   top?: string
   hidePadding?: boolean
   dialogWidth?: string
@@ -18,8 +31,6 @@ export type ModalDialogOptions = {
   height?: string
   hideFooter?: boolean
   showClose?: boolean
-  renderComponent: renderComponent
-  onConfirm: onConfirm
 }
 
 export type renderComponent = {

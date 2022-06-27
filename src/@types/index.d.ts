@@ -56,6 +56,7 @@ declare global {
 
   type ObjectValueSuite<T = any> = { [key in any]: T }
 
+  // store filterResponse Callback type
   type IStoreFilterCallBack = (res: IRequestData) => Promise<IRequestData>
 
 }

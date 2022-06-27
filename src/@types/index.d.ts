@@ -6,6 +6,11 @@ import { WidgetsPlugins } from '@/widgets/types'
 
 // $ModalDialog
 declare module 'vue' {
+  /**
+   * Costom Instance.
+   *
+   * Sample： `getCurrentInstance()?.proxy as ComponentPublicInstanceCostom`
+   */
   // FIXME 这里可以再细分一下  不一定是Widgets 也可以是别的自定义插件
   export type ComponentPublicInstanceCostom = ComponentPublicInstance<WidgetsPlugins>
 
@@ -15,12 +20,18 @@ declare module 'vue' {
 }
 
 declare module 'axios' {
+  /**
+   * Costom Axios Field.
+   */
   export interface AxiosRequestConfig {
     redirect?: string
   }
 }
 
 declare module 'pinia' {
+  /**
+   * Costom Pinia Field.
+   */
   export interface PiniaCustomProperties {
     filterResponse: filterResponseTypes
   }
@@ -38,6 +49,9 @@ declare global {
     children?: Array<RouteRecordRaw | CustomizeRouter>
   }
 
+  /**
+   * Costom Axios Function Types.
+   */
   interface IRequestSuite {
     get(uri: string, params?: ObjectValueSuite, config?: AxiosRequestConfig): Promise<IRequestData>
     post(uri: string, data?: any, config?: AxiosRequestConfig): Promise<IRequestData>
@@ -48,15 +62,27 @@ declare global {
 
   type IModulesApiSuite = ObjectValueSuite<(...args: any) => Promise<IRequestData>>
 
+  /**
+   * `error`: Response Status Code.
+   *
+   * `data`: Response Body.
+   *
+   * `msg`: Response Message.
+   */
   interface IRequestData {
     error: number
     data: any
     msg: string
   }
 
+  /**
+   * General Object Types.
+   */
   type ObjectValueSuite<T = any> = { [key in any]: T }
 
-  // store filterResponse Callback type
+  /**
+   * Store FilterResponse Callback Type.
+   */
   type IStoreFilterCallBack = (res: IRequestData) => Promise<IRequestData>
 
 }

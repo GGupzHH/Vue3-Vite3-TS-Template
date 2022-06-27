@@ -6,8 +6,8 @@ import { ElMessage } from 'element-plus'
 
 export function filterResponse(
   res: IRequestData,
-  successCb?: IStoreFilterCallBack | undefined,
-  errorCb?: IStoreFilterCallBack | undefined
+  successCb?: IStoreFilterCallBack | undefined | null,
+  errorCb?: IStoreFilterCallBack | undefined | null
 ) :Promise<IRequestData>{
   return new Promise((resolve) => {
     if (res && res.error === 0) {

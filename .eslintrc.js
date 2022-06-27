@@ -31,7 +31,10 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     'no-irregular-whitespace': 2,
     'no-multi-spaces': 1,
-    'object-property-newline': ['error'],
+    'object-curly-newline': ['error', 'always'],
+    'object-property-newline': ['error', {
+      'allowAllPropertiesOnSameLine': false
+    }],
     'key-spacing': 'error',
     'object-curly-spacing': ['error','always'],
     'block-spacing': ['error', 'always'],
@@ -84,8 +87,12 @@ module.exports = {
         allowTemplateLiterals: true
       }
     ],
-    camelcase: ['error', { properties: 'never' }],
-    indent: ['warn', 2, { SwitchCase: 1 }],
+    camelcase: ['error', {
+      properties: 'never'
+    }],
+    indent: ['warn', 2, {
+      SwitchCase: 1
+    }],
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {

@@ -22,7 +22,7 @@ specifiers:
   typescript: ^4.7.4
   vite: ^2.9.13
   vue: ^3.2.37
-  vue-router: ^4.1.0
+  vue-router: ^4.1.1
   vue-tsc: ^0.3.0
   vuex: ^4.0.2
   vuex-router-sync: ^5.0.0
@@ -35,9 +35,9 @@ dependencies:
   pinia: registry.npmmirror.com/pinia/2.0.14_typescript@4.7.4+vue@3.2.37
   rollup-plugin-terser: registry.npmmirror.com/rollup-plugin-terser/7.0.2
   vue: registry.npmmirror.com/vue/3.2.37
-  vue-router: registry.npmmirror.com/vue-router/4.1.0_vue@3.2.37
+  vue-router: registry.npmmirror.com/vue-router/4.1.1_vue@3.2.37
   vuex: registry.npmmirror.com/vuex/4.0.2_vue@3.2.37
-  vuex-router-sync: registry.npmmirror.com/vuex-router-sync/5.0.0_vue-router@4.1.0+vuex@4.0.2
+  vuex-router-sync: registry.npmmirror.com/vuex-router-sync/5.0.0_vue-router@4.1.1+vuex@4.0.2
 
 devDependencies:
   '@types/js-cookie': registry.npmmirror.com/@types/js-cookie/3.0.2
@@ -194,10 +194,10 @@ packages:
       '@jridgewell/trace-mapping': registry.npmmirror.com/@jridgewell/trace-mapping/0.3.14
     dev: false
 
-  registry.npmmirror.com/@jridgewell/resolve-uri/3.0.8:
-    resolution: {integrity: sha512-YK5G9LaddzGbcucK4c8h5tWFmMPBvRZ/uyWmN1/SbBdIvqGUdWGkJ5BAaccgs6XbzVLsqbPJrBSFwKv3kT9i7w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@jridgewell/resolve-uri/-/resolve-uri-3.0.8.tgz}
+  registry.npmmirror.com/@jridgewell/resolve-uri/3.1.0:
+    resolution: {integrity: sha512-F2msla3tad+Mfht5cJq7LSXcdudKTWCVYUgw6pLFOOHSTtZlj6SWNYAp+AhuqLmWdBO2X5hPrLcu8cVP8fy28w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@jridgewell/resolve-uri/-/resolve-uri-3.1.0.tgz}
     name: '@jridgewell/resolve-uri'
-    version: 3.0.8
+    version: 3.1.0
     engines: {node: '>=6.0.0'}
     dev: false
 
@@ -228,7 +228,7 @@ packages:
     name: '@jridgewell/trace-mapping'
     version: 0.3.14
     dependencies:
-      '@jridgewell/resolve-uri': registry.npmmirror.com/@jridgewell/resolve-uri/3.0.8
+      '@jridgewell/resolve-uri': registry.npmmirror.com/@jridgewell/resolve-uri/3.1.0
       '@jridgewell/sourcemap-codec': registry.npmmirror.com/@jridgewell/sourcemap-codec/1.4.14
     dev: false
 
@@ -315,10 +315,10 @@ packages:
     version: 1.2.2
     dev: true
 
-  registry.npmmirror.com/@types/node/18.0.1:
-    resolution: {integrity: sha512-CmR8+Tsy95hhwtZBKJBs0/FFq4XX7sDZHlGGf+0q+BRZfMbOTkzkj0AFAuTyXbObDIoanaBBW0+KEW+m3N16Wg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-18.0.1.tgz}
+  registry.npmmirror.com/@types/node/18.0.3:
+    resolution: {integrity: sha512-HzNRZtp4eepNitP+BD6k2L6DROIDG4Q0fm4x+dwfsr6LGmROENnok75VGw40628xf+iR24WeMFcHuuBDUAzzsQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-18.0.3.tgz}
     name: '@types/node'
-    version: 18.0.1
+    version: 18.0.3
     dev: false
 
   registry.npmmirror.com/@types/normalize-package-data/2.4.1:
@@ -2859,7 +2859,7 @@ packages:
     version: 26.6.2
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node/18.0.1
+      '@types/node': registry.npmmirror.com/@types/node/18.0.3
       merge-stream: registry.npmmirror.com/merge-stream/2.0.0
       supports-color: registry.npmmirror.com/supports-color/7.2.0
     dev: false
@@ -4942,11 +4942,11 @@ packages:
       - supports-color
     dev: true
 
-  registry.npmmirror.com/vue-router/4.1.0_vue@3.2.37:
-    resolution: {integrity: sha512-A+dYO0ZXLJFZ40ebW3XtqehCW0Wv2xNH4lFddOByDja4NtItEdyirrShTlvD3UA4xc5a5mG2RRI30BusYpOb9g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-router/-/vue-router-4.1.0.tgz}
-    id: registry.npmmirror.com/vue-router/4.1.0
+  registry.npmmirror.com/vue-router/4.1.1_vue@3.2.37:
+    resolution: {integrity: sha512-Wp1mEf2xCwT0ez7o9JvgpfBp9JGnVb+dPERzXDbugTatzJAJ60VWOhJKifQty85k+jOreoFHER4r5fu062PhPw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-router/-/vue-router-4.1.1.tgz}
+    id: registry.npmmirror.com/vue-router/4.1.1
     name: vue-router
-    version: 4.1.0
+    version: 4.1.1
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -4979,7 +4979,7 @@ packages:
       '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.37
     dev: false
 
-  registry.npmmirror.com/vuex-router-sync/5.0.0_vue-router@4.1.0+vuex@4.0.2:
+  registry.npmmirror.com/vuex-router-sync/5.0.0_vue-router@4.1.1+vuex@4.0.2:
     resolution: {integrity: sha512-Mry2sO4kiAG64714X1CFpTA/shUH1DmkZ26DFDtwoM/yyx6OtMrc+MxrU+7vvbNLO9LSpgwkiJ8W+rlmRtsM+w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vuex-router-sync/-/vuex-router-sync-5.0.0.tgz}
     id: registry.npmmirror.com/vuex-router-sync/5.0.0
     name: vuex-router-sync
@@ -4988,7 +4988,7 @@ packages:
       vue-router: ^3.0.0
       vuex: ^3.0.0
     dependencies:
-      vue-router: registry.npmmirror.com/vue-router/4.1.0_vue@3.2.37
+      vue-router: registry.npmmirror.com/vue-router/4.1.1_vue@3.2.37
       vuex: registry.npmmirror.com/vuex/4.0.2_vue@3.2.37
     dev: false
 

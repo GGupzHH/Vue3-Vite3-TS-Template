@@ -1,8 +1,8 @@
 [![Author](https://img.shields.io/badge/Author-GGupzHH-d9f)](https://github.com/GGupzHH)
 
-# Vue 3 + Typescript + Vite
+# Vue3 + Typescript + Vite3
 ```
-  基于Vue3、TypeScript、Vite2 实现的模板
+  基于Vue3、TypeScript、Vite3 实现的模板
 ```
 
 

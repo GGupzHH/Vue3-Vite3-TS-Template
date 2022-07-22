@@ -6,7 +6,7 @@ const path = require('path')
 const htmlPlugin = () => {
   return {
     name: 'html-transform',
-    transformIndexHtml (html) {
+    transformIndexHtml(html) {
       return html.replace(
         /<title>(.*?)<\/title>/,
         '<title>UPro</title>'

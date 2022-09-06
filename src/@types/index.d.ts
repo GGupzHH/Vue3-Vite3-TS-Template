@@ -44,11 +44,6 @@ declare module 'vue-router' {
 }
 
 declare global {
-  type CustomizeRouter = {
-    icon?: string
-    children?: Array<RouteRecordRaw | CustomizeRouter>
-  }
-
   /**
    * Costom Axios Function Types.
    */

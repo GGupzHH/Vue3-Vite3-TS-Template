@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { terser } from 'rollup-plugin-terser'
 const path = require('path')
@@ -16,7 +16,7 @@ const htmlPlugin = () => {
 }
 export default defineConfig({
   plugins: [
-    vue(),
+    vue() as Plugin,
     htmlPlugin(),
     terser(
       {
@@ -24,7 +24,7 @@ export default defineConfig({
           drop_console: true
         }
       }
-    )
+    ) as Plugin
   ],
   server: {
     // proxy: {

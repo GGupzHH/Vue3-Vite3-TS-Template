@@ -39,6 +39,6 @@ export type renderComponent = {
 }
 
 export type onConfirm = {
-  (instance: any): Promise<any>
+  (instance: any): any
 }
 

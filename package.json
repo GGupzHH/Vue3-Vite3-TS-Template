@@ -2,7 +2,7 @@
   "name": "vite-vue3-ts-template",
   "version": "0.0.0",
   "scripts": {
-    "serve": "vite --host",
+    "serve": "vite --host --port \"${npm_config_port}\"",
     "build": "vite build",
     "preview": "vite preview",
     "eslint-fix": "eslint --fix --ext .js,.ts,.jsx,.tsx,.vue ./src"

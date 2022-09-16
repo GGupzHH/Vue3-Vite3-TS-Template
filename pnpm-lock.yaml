@@ -553,7 +553,7 @@ packages:
     dependencies:
       upath: registry.npmmirror.com/upath/2.0.1
       vscode-jsonrpc: registry.npmmirror.com/vscode-jsonrpc/8.0.2
-      vscode-uri: registry.npmmirror.com/vscode-uri/3.0.3
+      vscode-uri: registry.npmmirror.com/vscode-uri/3.0.4
     dev: true
 
   registry.npmmirror.com/@volar/source-map/0.27.24:
@@ -4807,7 +4807,7 @@ packages:
       vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument/1.0.7
       vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types/3.17.2
       vscode-nls: registry.npmmirror.com/vscode-nls/5.2.0
-      vscode-uri: registry.npmmirror.com/vscode-uri/3.0.3
+      vscode-uri: registry.npmmirror.com/vscode-uri/3.0.4
     dev: true
 
   registry.npmmirror.com/vscode-html-languageservice/4.2.5:
@@ -4818,7 +4818,7 @@ packages:
       vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument/1.0.7
       vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types/3.17.2
       vscode-nls: registry.npmmirror.com/vscode-nls/5.2.0
-      vscode-uri: registry.npmmirror.com/vscode-uri/3.0.3
+      vscode-uri: registry.npmmirror.com/vscode-uri/3.0.4
     dev: true
 
   registry.npmmirror.com/vscode-json-languageservice/4.2.1:
@@ -4830,7 +4830,7 @@ packages:
       vscode-languageserver-textdocument: registry.npmmirror.com/vscode-languageserver-textdocument/1.0.7
       vscode-languageserver-types: registry.npmmirror.com/vscode-languageserver-types/3.17.2
       vscode-nls: registry.npmmirror.com/vscode-nls/5.2.0
-      vscode-uri: registry.npmmirror.com/vscode-uri/3.0.3
+      vscode-uri: registry.npmmirror.com/vscode-uri/3.0.4
     dev: true
 
   registry.npmmirror.com/vscode-jsonrpc/8.0.2:
@@ -4910,10 +4910,10 @@ packages:
     version: 2.1.2
     dev: true
 
-  registry.npmmirror.com/vscode-uri/3.0.3:
-    resolution: {integrity: sha512-EcswR2S8bpR7fD0YPeS7r2xXExrScVMxg4MedACaWHEtx9ftCF/qHG1xGkolzTPcEmjTavCQgbVzHUIdTMzFGA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-uri/-/vscode-uri-3.0.3.tgz}
+  registry.npmmirror.com/vscode-uri/3.0.4:
+    resolution: {integrity: sha512-aEmKD6H8Sg8gaQAUrnadG0BMeWXtiWhRsj1a94n2FYsMkDpgnK7BRVzZjOUYIvkv2B+bp5Bmt4ImZCpYbnJwkg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vscode-uri/-/vscode-uri-3.0.4.tgz}
     name: vscode-uri
-    version: 3.0.3
+    version: 3.0.4
     dev: true
 
   registry.npmmirror.com/vscode-vue-languageservice/0.27.30:

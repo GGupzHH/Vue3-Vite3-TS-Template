@@ -22,8 +22,8 @@
   "devDependencies": {
     "@types/js-cookie": "^3.0.2",
     "@types/nprogress": "^0.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.45.1",
-    "@typescript-eslint/parser": "^5.45.1",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
     "@vitejs/plugin-vue": "^1.10.2",
     "eslint": "^8.29.0",
     "eslint-plugin-html": "^6.2.0",
@@ -32,7 +32,7 @@
     "node-sass": "^7.0.3",
     "sass": "^1.56.1",
     "sass-loader": "12.4.0",
-    "typescript": "^4.9.3",
+    "typescript": "^4.9.4",
     "vite": "^3.2.5",
     "vue-tsc": "^0.3.0"
   }

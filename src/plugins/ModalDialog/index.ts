@@ -1,5 +1,5 @@
 import { App, createVNode, render, nextTick, Component, VNode, ComponentPublicInstanceCostom } from 'vue'
-import Modal from '@/widgets/ModalDialog/modal.vue'
+import Modal from '@/plugins/ModalDialog/modal.vue'
 import { ModalDialogOptions, renderComponent } from '../types'
 
 const extractData = (options: { renderComponent: renderComponent; }) => {

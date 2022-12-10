@@ -10,6 +10,7 @@
       "modules/*": ["./src/modules/*"],
       "router/*": ["./src/router/*"],
       "widgets/*": ["./src/widgets/*"],
+      "plugins/*": ["./src/plugins/*"],
       "mixins/*": ["./src/mixins/*"]
     }
   },

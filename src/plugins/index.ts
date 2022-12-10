@@ -1,5 +1,5 @@
 import { App } from 'vue'
-import ModalDialog from '@/widgets/ModalDialog'
+import ModalDialog from '@/plugins/ModalDialog'
 
 export default {
   install(app: App<any>) {

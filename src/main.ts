@@ -10,7 +10,7 @@ import '@/assets/fonts'
 
 import ElementPlus from 'element-plus'
 import GlobalComponents from '@/components'
-import Widgets from '@/widgets'
+import Plugins from '@/plugins'
 
 const app = createApp(App)
 
@@ -21,5 +21,5 @@ app
 app
   .use(ElementPlus)
   .use(GlobalComponents)
-  .use(Widgets)
+  .use(Plugins)
   .mount('#app')

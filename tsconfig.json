@@ -18,7 +18,8 @@
       "utils/*": ["./src/utils"],
       "modules/*": ["./src/modules/*"],
       "router/*": ["./src/router/*"],
-      "widgets/*": ["./src/widgets/*"],
+      "widgets/*": ["src/widgets/*"],
+      "plugins/*": ["src/plugins/*"],
       "mixins/*": ["./src/mixins/*"]
     }
   },

@@ -2,7 +2,7 @@ import { filterResponseTypes } from '@/store/utils/mixin'
 import { AxiosRequestConfig } from 'axios'
 import { RouteRecordRaw } from 'vue-router'
 import { ComponentPublicInstance } from 'vue'
-import { WidgetsPlugins } from '@/widgets/types'
+import { Plugins } from '@/plugins/types'
 
 // $ModalDialog
 declare module 'vue' {
@@ -12,7 +12,7 @@ declare module 'vue' {
    * Sample： `getCurrentInstance()?.proxy as ComponentPublicInstanceCostom`
    */
   // FIXME 这里可以再细分一下  不一定是Widgets 也可以是别的自定义插件
-  export type ComponentPublicInstanceCostom = ComponentPublicInstance<WidgetsPlugins>
+  export type ComponentPublicInstanceCostom = ComponentPublicInstance<Plugins>
 
   export interface VNode {
     destroy: any

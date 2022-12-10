@@ -15,7 +15,7 @@ export type ModalDialog = (
   }
 ) => VNode
 
-export type WidgetsPlugins = {
+export type Plugins = {
   $ModalDialog: ModalDialog
   visible?: boolean
 }

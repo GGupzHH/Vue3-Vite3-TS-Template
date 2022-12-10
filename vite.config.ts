@@ -66,6 +66,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/widgets')
       },
       {
+        find: 'plugins',
+        replacement: path.resolve(__dirname, 'src/plugins')
+      },
+      {
         find: 'mixins',
         replacement: path.resolve(__dirname, 'src/mixins')
       }

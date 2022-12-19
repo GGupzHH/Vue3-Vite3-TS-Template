@@ -1,5 +1,17 @@
 {
   "name": "vite-vue3-ts-template",
+  "description": "vue3 template",
+  "author": {
+    "name": "GGupzHH",
+    "email": "1248023357@qq.com",
+    "url": "https://github.com/GGupzHH"
+  },
+  "repository": "git@github.com:GGupzHH/Vue3-Vite3-TS-Template.git",
+  "keywords": [
+    "vue",
+    "typescript",
+    "template"
+  ],
   "version": "0.0.0",
   "scripts": {
     "serve": "vite --host --port \"${npm_config_port}\"",

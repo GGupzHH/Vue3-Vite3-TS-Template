@@ -1,7 +1,6 @@
-/* global IModulesApiSuite */
 import request from '@/utils/request'
 
-const DemoTest2Api: IModulesApiSuite = {
+const DemoTest2Api = {
   getDemoTestList() {
     return request.get('/api/demo_test/list', {
       redirect: '404'

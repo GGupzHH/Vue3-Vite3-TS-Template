@@ -21,10 +21,10 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
-    "element-plus": "^2.2.32",
+    "element-plus": "^2.2.34",
     "js-cookie": "^3.0.1",
     "nprogress": "^0.2.0",
-    "pinia": "^2.0.32",
+    "pinia": "^2.0.33",
     "rollup-plugin-terser": "^7.0.2",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
@@ -32,8 +32,8 @@
   "devDependencies": {
     "@types/js-cookie": "^3.0.3",
     "@types/nprogress": "^0.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
-    "@typescript-eslint/parser": "^5.54.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
     "@vitejs/plugin-vue": "^1.10.2",
     "eslint": "^8.35.0",
     "eslint-plugin-html": "^6.2.0",

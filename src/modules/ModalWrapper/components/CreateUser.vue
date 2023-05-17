@@ -84,7 +84,6 @@
 
 <script lang="ts">
 import { ElForm } from 'element-plus'
-import { defineComponent, reactive, ref } from 'vue'
 
 export default defineComponent({
   name: 'CreateUser',

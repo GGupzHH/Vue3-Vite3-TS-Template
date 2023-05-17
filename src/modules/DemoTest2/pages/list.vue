@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { ComponentPublicInstanceCostom, defineComponent, getCurrentInstance } from 'vue'
+import { ComponentPublicInstanceCostom } from 'vue'
 import {
   useDemoTest2
 } from '@/modules/DemoTest2/store'

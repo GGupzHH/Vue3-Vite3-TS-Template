@@ -1,7 +1,5 @@
 import { filterResponseTypes } from '@/store/utils/mixin'
 import { AxiosRequestConfig } from 'axios'
-import { RouteRecordRaw } from 'vue-router'
-import { ComponentPublicInstance } from 'vue'
 import { Plugins } from '@/plugins/types'
 
 // $ModalDialog

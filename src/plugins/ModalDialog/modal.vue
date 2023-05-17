@@ -74,13 +74,6 @@
 
 <script lang="ts">
 import { isNumberical } from '@/utils/type'
-import {
-  defineComponent,
-  getCurrentInstance,
-  ref,
-  computed,
-  reactive
-} from 'vue'
 
 export default defineComponent({
   name: 'ModalDialog',

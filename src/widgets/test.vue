@@ -3,10 +3,6 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent,
-  getCurrentInstance
-} from 'vue'
 export default defineComponent({
   name: 'Test'
 })

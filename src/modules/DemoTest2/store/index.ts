@@ -16,7 +16,7 @@ export const useDemoTest2 = defineStore('DemoTest2', {
       console.log(this.names)
     },
     async getDemoTestList() {
-      const res = await DemoTest2Api.getDemoTestList({})
+      const res = await DemoTest2Api.getDemoTestList()
       return this.filterResponse(res)
     }
   }

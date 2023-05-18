@@ -19,12 +19,6 @@
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "lib": ["esnext", "dom"],
-    "types": [
-      "vite/client",
-      "jest",
-      "node",
-      "element-plus/global"
-    ],
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
@@ -43,7 +37,6 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "./auto-imports.d.ts", // 全局API声明
-    "./components.d.ts", // 全局组件声明
   ],
   "exclude": ["node_modules"]
 }

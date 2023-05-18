@@ -1,6 +1,11 @@
 import { defineConfig, Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { terser } from 'rollup-plugin-terser'
+import svgLoader from 'vite-svg-loader'
+
+import AutoImport from 'unplugin-auto-import/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+
 const path = require('path')
 
 const htmlPlugin = () => {
@@ -14,10 +19,64 @@ const htmlPlugin = () => {
     }
   }
 }
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     vue() as Plugin,
+    svgLoader(),
     htmlPlugin(),
+    AutoImport({
+      include: [/\.[tj]sx?$/, /\.vue\??/],
+      imports: [
+        'vue',
+        'vue-router',
+        '@vueuse/core',
+        {
+          vue: ['createVNode', 'render'],
+          'vue-router': [
+            'createRouter',
+            'createWebHistory',
+            'useRouter',
+            'useRoute'
+          ]
+          // 全局使用 _.xxxx()
+          // 'lodash-es': [
+          //   // default imports
+          //   ['*', '_'] // import { * as _ } from 'lodash-es',
+          // ]
+        },
+        // type import
+        {
+          from: 'vue',
+          imports: [
+            'App',
+            'ComponentPublicInstance',
+            'ComponentPublicInstanceCostom'
+          ],
+          type: true
+        },
+        {
+          from: 'vue-router',
+          imports: [
+            'RouteRecordRaw',
+            'RouteLocationRaw',
+            'LocationQuery',
+            'NavigationFailure',
+            'RouteParams',
+            'RouteLocationNormalizedLoaded',
+            'RouteRecordName',
+            'NavigationGuard'
+          ],
+          type: true
+        }
+      ],
+      resolvers: mode === 'development' ? [] : [ElementPlusResolver()],
+      dirs: ['./src/hooks'],
+      dts: './auto-imports.d.ts',
+      eslintrc: {
+        enabled: true
+      },
+      vueTemplate: true
+    }),
     terser(
       {
         compress: {
@@ -82,4 +141,4 @@ export default defineConfig({
       }
     }
   }
-})
+}))

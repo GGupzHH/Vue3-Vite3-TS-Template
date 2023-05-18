@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
@@ -9,6 +16,8 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "lib": ["esnext", "dom"],
     "baseUrl": "./",
     "paths": {
@@ -19,9 +28,16 @@
       "modules/*": ["./src/modules/*"],
       "router/*": ["./src/router/*"],
       "widgets/*": ["src/widgets/*"],
-      "plugins/*": ["src/plugins/*"],
-      "mixins/*": ["./src/mixins/*"]
+      "plugins/*": ["./src/plugins/*"],
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "./auto-imports.d.ts", // 全局API声明
+    "src/@types/index.d.ts",
+  ],
+  "exclude": ["node_modules"]
 }

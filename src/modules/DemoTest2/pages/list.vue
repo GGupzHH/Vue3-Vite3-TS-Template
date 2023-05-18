@@ -20,7 +20,6 @@
 </template>
 
 <script lang="ts">
-import { ComponentPublicInstanceCostom, defineComponent, getCurrentInstance } from 'vue'
 import {
   useDemoTest2
 } from '@/modules/DemoTest2/store'
@@ -28,7 +27,8 @@ import {
 export default defineComponent({
   name: 'DemoTest2',
   setup() {
-    const proxy = getCurrentInstance()?.proxy as ComponentPublicInstanceCostom
+    const proxy = getCurrentInstance()?.proxy
+
     const useDemoTest2Store = useDemoTest2()
     const handleClick = (store: typeof useDemoTest2Store) => {
       console.log(store)

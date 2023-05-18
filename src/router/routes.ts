@@ -14,16 +14,10 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     component: Layout,
     redirect: '/test',
-    props: {
-      icon: 'xxxxx'
-    },
     children: [
       {
         path: 'test',
-        component: () => import('@/modules/ModalWrapper/pages/test.vue'),
-        props: {
-          icon: '2133'
-        }
+        component: () => import('@/modules/ModalWrapper/pages/test.vue')
       }
     ]
   },

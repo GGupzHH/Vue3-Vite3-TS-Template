@@ -10,7 +10,7 @@ declare module 'vue' {
    * Sample： `getCurrentInstance()?.proxy as ComponentPublicInstanceCostom`
    */
   // FIXME 这里可以再细分一下  不一定是Widgets 也可以是别的自定义插件
-  export type ComponentPublicInstanceCostom = ComponentPublicInstance<Plugins>
+  interface ComponentCustomProperties extends Plugins {}
 
   export interface VNode {
     destroy: any

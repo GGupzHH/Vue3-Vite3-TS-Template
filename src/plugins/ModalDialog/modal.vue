@@ -4,12 +4,12 @@
     :title="title"
     :show-close="false"
     :width="dialogWidth"
-    :custom-class="getDialogClassName"
+    :class="getDialogClassName"
     v-bind="getOriginAttrs()"
     @closed="handleRealClosed"
   >
     <template
-      #title
+      #header
     >
       <IconFont
         v-if="headerIcon"
@@ -199,6 +199,11 @@ export default defineComponent({
       return resultAttrs
     }
 
+    const handleShowDialog = (localVisible: boolean) => {
+      // visible.value = localVisible
+      console.log(localVisible)
+    }
+
     return {
       visible,
       getDialogClassName,
@@ -211,7 +216,8 @@ export default defineComponent({
       handleConfirm,
       getOriginAttrs,
 
-      handleRealClosed
+      handleRealClosed,
+      handleShowDialog
     }
   }
 })

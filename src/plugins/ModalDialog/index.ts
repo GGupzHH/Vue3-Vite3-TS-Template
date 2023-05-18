@@ -1,28 +1,32 @@
-import { App, createVNode, render, nextTick, Component, VNode, ComponentPublicInstanceCostom } from 'vue'
+import { App, createVNode, render, nextTick, Component, VNode } from 'vue'
 import Modal from '@/plugins/ModalDialog/modal.vue'
 import { ModalDialogOptions, renderComponent } from '../types'
+import WarningDialogVue from '@/plugins/ModalDialog/WarningDialog.vue'
 
 const extractData = (options: { renderComponent: renderComponent; }) => {
   const extractSlotComponents = (renderComponent: renderComponent) => {
     const component: Record<string, Component> = {}
-    let componantData: any = {}
+    let componentData: any = {}
 
     if (renderComponent) {
       const { data } = renderComponent
-      componantData = data
-      component[renderComponent.component.name as string] = renderComponent.component
+      componentData = data
+      // 删除弹框不需要再引入组件
+      if (renderComponent.component?.name) {
+        component[renderComponent.component.name as string] = renderComponent.component
+      }
     }
 
     return {
       component,
-      componantData
+      componentData
     }
   }
 
-  const { component, componantData } = extractSlotComponents(options.renderComponent)
+  const { component, componentData } = extractSlotComponents(options.renderComponent)
   return {
     component,
-    componantData
+    componentData
   }
 }
 
@@ -32,14 +36,14 @@ export default {
     app.config.globalProperties.$ModalDialog = function(options: ModalDialogOptions) {
       const {
         component,
-        componantData
+        componentData
       } = extractData(options)
 
       const vm: VNode = createVNode(
         Modal,
         {
           ...options,
-          componantData,
+          componentData,
           components: component
         }
       )
@@ -63,8 +67,8 @@ export default {
       document.body.appendChild(container.firstElementChild)
 
       nextTick(() => {
-        const proxy = vm.component?.proxy as ComponentPublicInstanceCostom
-        proxy.visible = true
+        const proxy = vm.component?.proxy
+        proxy && (proxy.visible = true)
       })
 
       return vm

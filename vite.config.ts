@@ -52,7 +52,8 @@ export default defineConfig(({ mode }) => ({
           imports: [
             'App',
             'ComponentPublicInstance',
-            'ComponentPublicInstanceCostom'
+            'ComponentPublicInstanceCostom',
+            'DefineComponent'
           ],
           type: true
         },

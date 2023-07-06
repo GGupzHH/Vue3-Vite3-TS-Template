@@ -1,9 +1,9 @@
-// Vue Component Install
-import IconFont from '@/components/IconFont/index.vue'
-
 const component = {
   install: function(app: import('vue').App<any>): void {
-    app.component(IconFont.name, IconFont)
+    const components = import.meta.glob<DefineComponent>('/src/components/*/index.vue', { eager: true })
+    for (const [, component] of Object.entries(components)) {
+      app.component(component.default.name, component.default)
+    }
   }
 }
 

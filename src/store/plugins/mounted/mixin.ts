@@ -1,7 +1,3 @@
-/* global
-  IRequestData
-  IStoreFilterCallBack
-*/
 import { ElMessage } from 'element-plus'
 
 export function filterResponse(

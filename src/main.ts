@@ -23,4 +23,3 @@ app
   .use(GlobalComponents)
   .use(Plugins)
   .mount('#app')
-p

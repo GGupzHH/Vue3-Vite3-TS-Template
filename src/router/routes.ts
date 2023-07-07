@@ -16,6 +16,10 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/test',
     children: [
       {
+        path: 'demo',
+        component: () => import('@/modules/DemoTest2/pages/list.vue')
+      },
+      {
         path: 'test',
         component: () => import('@/modules/ModalWrapper/pages/test.vue')
       }

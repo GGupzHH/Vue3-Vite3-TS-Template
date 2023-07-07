@@ -1,10 +1,8 @@
-/**
- * plugins all export
- */
+import { filterResponse } from '@/store/plugins/mounted/mixin'
+import { PiniaPluginContext } from 'pinia'
 
-import pinia from '@/store'
+const piniaPlugins = (context: PiniaPluginContext): void => {
+  context.store.filterResponse = filterResponse
+}
 
-import piniaPlugins from '@/store/plugins/mounted'
-// import mounted from './mounted'
-
-pinia.use(piniaPlugins)
+export default piniaPlugins

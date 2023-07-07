@@ -107,17 +107,16 @@
     └── routes.ts       // 业务路由
   ```
 
-#### 1.0.3.7 store
+#### 1.0.3.6 store
   ```txt
-    ├── plugins
-    │   ├── index.ts
-    │   └── mounted
-    ├── utils
-        └── mixin.ts
-    └── index.ts       // 实例化Pinia并挂载Pinia插件
+    ├── index.ts          // 实例化Pinia并挂载Pinia插件
+    └── plugins
+        ├── index.ts      // 注册插件
+        └── mounted
+            └── mixin.ts
   ```
 
-#### 1.0.3.6 styles
+#### 1.0.3.7 styles
   ```txt
     ├── common.scss             // 实例化vue-router
     ├── element-status.scss     // 覆盖组件库样式

@@ -131,6 +131,7 @@
 #### 1.0.3.8 utils
   ```txt
     ├── camelCase.ts             // 接口字段转驼峰
+    ├── type.ts                  // 类型判断
     └── request.ts               // axios封装
   ```
 

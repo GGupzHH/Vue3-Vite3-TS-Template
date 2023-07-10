@@ -1,4 +1,4 @@
-import { filterResponseTypes } from '@/store/plugins/mounted/mixin'
+import { filterResponseTypes } from '@/store/plugins/mixin'
 import { AxiosRequestConfig } from 'axios'
 import { Plugins } from '@/plugins/types'
 

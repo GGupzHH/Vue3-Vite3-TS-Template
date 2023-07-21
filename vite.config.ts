@@ -2,6 +2,7 @@ import { defineConfig, Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { terser } from 'rollup-plugin-terser'
 import svgLoader from 'vite-svg-loader'
+import UnoCSS from 'unocss/vite'
 
 import AutoImport from 'unplugin-auto-import/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
@@ -22,6 +23,7 @@ const htmlPlugin = () => {
 export default defineConfig(({ mode }) => ({
   plugins: [
     vue() as Plugin,
+    UnoCSS(),
     svgLoader(),
     htmlPlugin(),
     AutoImport({
@@ -50,7 +52,8 @@ export default defineConfig(({ mode }) => ({
           imports: [
             'App',
             'ComponentPublicInstance',
-            'ComponentPublicInstanceCostom'
+            'ComponentPublicInstanceCostom',
+            'DefineComponent'
           ],
           type: true
         },

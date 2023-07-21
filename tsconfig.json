@@ -6,7 +6,10 @@
     "noLib": false,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    
+    "types": [
+      "vite/client",
+      "node",
+    ],
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",

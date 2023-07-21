@@ -82,4 +82,7 @@
 </script>
 
 <style lang="scss" scoped>
+.asds {
+  color: red;
+}
 </style>

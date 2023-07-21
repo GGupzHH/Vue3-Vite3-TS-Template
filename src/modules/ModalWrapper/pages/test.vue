@@ -1,5 +1,8 @@
 <template>
-  <div @click="handleClick">
+  <div
+    class="text-red"
+    @click="handleClick"
+  >
     123
   </div>
   <el-button @click="handleClick">123</el-button>

@@ -13,11 +13,19 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     component: Layout,
-    redirect: '/test',
+    redirect: '/login',
     children: [
+      {
+        path: 'demo',
+        component: () => import('@/modules/DemoTest2/pages/list.vue')
+      },
       {
         path: 'test',
         component: () => import('@/modules/ModalWrapper/pages/test.vue')
+      },
+      {
+        path: 'login',
+        component: () => import('@/modules/Account/pages/login.vue')
       }
     ]
   },

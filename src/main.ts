@@ -10,6 +10,7 @@ import '@/assets/fonts'
 import ElementPlus from 'element-plus'
 import GlobalComponents from '@/components'
 import Plugins from '@/plugins'
+import 'virtual:uno.css'
 
 const app = createApp(App)
 

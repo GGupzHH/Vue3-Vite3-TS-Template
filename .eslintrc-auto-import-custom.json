@@ -1,0 +1,9 @@
+{
+  "globals": {
+    "IRequestSuite": true,
+    "IModulesApiSuite": true,
+    "IRequestData": true,
+    "ObjectValueSuite": true,
+    "IStoreFilterCallBack": true
+  }
+}

@@ -24,6 +24,7 @@
         </el-form-item>
         <el-form-item>
           <el-button
+            v-permission="'sys:sdsd:asdasd'"
             class="w-screen py-14px"
             type="primary"
             size="large"

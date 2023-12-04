@@ -9,6 +9,7 @@ import '@/assets/fonts'
 
 import ElementPlus from 'element-plus'
 import GlobalComponents from '@/components'
+import GlobalDirectives from '@/directives'
 import Plugins from '@/plugins'
 import 'virtual:uno.css'
 
@@ -21,5 +22,6 @@ app
 app
   .use(ElementPlus)
   .use(GlobalComponents)
+  .use(GlobalDirectives)
   .use(Plugins)
   .mount('#app')

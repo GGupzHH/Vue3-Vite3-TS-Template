@@ -14,13 +14,14 @@
   ],
   "version": "0.0.0",
   "scripts": {
-    "serve": "vite --host --port \"${npm_config_port}\"",
+    "serve": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "eslint-fix": "eslint --fix --ext .js,.ts,.jsx,.tsx,.vue ./src"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
+    "@vueuse/core": "^10.6.1",
     "axios": "^1.6.2",
     "element-plus": "^2.4.3",
     "js-cookie": "^3.0.5",

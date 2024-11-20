@@ -140,7 +140,8 @@ export default defineConfig(({ mode }) => ({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: "@import './src/styles/element-variables.scss';"
+        // additionalData: "@import './src/styles/element-variables.scss';"
+        additionalData: "@use '@/styles/element-variables.scss';"
       }
     }
   }

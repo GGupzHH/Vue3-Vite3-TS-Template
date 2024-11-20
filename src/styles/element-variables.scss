@@ -3,53 +3,51 @@
 // otherwise it will affect the packaging speed.
 
 /* theme color */
-$--color-primary: #F37021;
-$--color-success: #67c23a;
-$--color-warning: #e6a23c;
-$--color-danger: #f56c6c;
-$--color-info: #909399;
+$color-primary: #0c969b;
+$color-success: #52c41a;
+$color-warning: #faad14;
+$color-danger: #fa5555;
+$color-info: #909399;
 
-$--button-font-weight: 400;
-
-$--color-text-regular: #1f2d3d;
-$--border-color-light: #dfe4ed;
-$--border-color-lighter: #e6ebf5;
-$--table-border: 1px solid #dfe6ec;
-
-// :export {
-//   colorPrimary: $--color-primary;
-// }
+$--colors: (
+  "primary": (
+    "base": $color-primary,
+  ),
+  "success": (
+    "base":  $color-success,
+  ),
+  "warning": (
+    "base":  $color-warning,
+  ),
+  "danger": (
+    "base":  $color-danger,
+  ),
+  "info": (
+    "base":  $color-info,
+  )
+);
 
 // 按需导入，重写覆盖自己所需样式
+
 @forward "element-plus/theme-chalk/src/common/var.scss" with (
-  $colors: (
-    "primary": (
-      "base": $--color-primary,
-    ),
-    "success": (
-      "base":  $--color-success,
-    ),
-    "warning": (
-      "base": $--color-warning,
-    ),
-    "danger": (
-      "base":  $--color-danger,
-    ),
-    "info": (
-      "base": $--color-info,
-    ),
-    
-  ),
+  $colors: $--colors,
   $text-color: (
-    'primary': red,
-    'regular': #606266,
-    'secondary': #909399,
-    'placeholder': #c0c4cc,
+    "regular": #606266,
+    "secondary": #909399,
+    "placeholder": #c0c4cc,
   ),
   $border-radius: (
-    'base': 4px,
-    'small': 2px,
-    'round': 20px,
-    'circle': 100%,
+    "base": 4px,
+    "small": 2px,
+    "round": 20px,
+    "circle": 100%,
   ),
 );
+
+:root {
+  --el-color-warning: #faad14;
+}
+
+// :export {
+//   colorPrimary: $color-primary;
+// }

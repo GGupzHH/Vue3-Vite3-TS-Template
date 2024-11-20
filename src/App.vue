@@ -2,6 +2,6 @@
   <router-view />
 </template>
 
-<style lang="sass">
-@import '@/styles/index.scss'
+<style lang="scss">
+@use '@/styles/index';
 </style>
